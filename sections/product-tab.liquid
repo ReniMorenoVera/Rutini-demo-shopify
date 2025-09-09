@@ -41,7 +41,7 @@
     flex-direction: row;
     column-gap: 10px;
     flex-wrap: wrap;" data-bs-toggle="tab">
-							¡DESTACADOS!
+							
 							{%- if section.settings.button_text != blank -%}
 								<div class="">
 									<a class="" href="{{ collections[proCollection].url }}" style="font-size: 1rem; color: #0084e0; text-decoration: none;" title="{{ section.settings.button_text }}">{{ section.settings.button_text }}</a>
@@ -332,13 +332,6 @@
 					"label": "List"
 				}
 			]
-		},
-		{
-			"type": "text",
-			"id": "button_text",
-			"label": "Button read more",
-			"default": "View all",
-			"info": "Hidden, if it's blank"
 		},
 		{
 			"type": "header",

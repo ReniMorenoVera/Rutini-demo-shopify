@@ -1,0 +1,126 @@
+{% comment %}
+  Section: Image + Text (Rutini-style)
+  - 2 columnas: imagen izquierda / contenido derecha
+  - Panel derecho con color de fondo configurable
+  - Stack en mobile
+{% endcomment %}
+
+<section id="image-text-rutini-{{ section.id }}" class="image-text-rutini">
+  <div class="itr-container {% if section.settings.full_width == false %}itr-page-width{% endif %}">
+    <div class="itr-grid {% if section.settings.reverse %}itr-reverse{% endif %}">
+      <div class="itr-media">
+        {% if section.settings.image != blank %}
+  {% assign img = section.settings.image %}
+  {% assign base_w = 2000 %}
+  {% if img.width < base_w %}{% assign base_w = img.width %}{% endif %}
+  {% assign base_h = base_w | divided_by: img.aspect_ratio | round %}
+
+  <img
+    src="{{ img | img_url: base_w | append: 'x' }}"
+    srcset="
+      {{ img | img_url: '400x'  }} 400w,
+      {{ img | img_url: '800x'  }} 800w,
+      {{ img | img_url: '1200x' }} 1200w,
+      {{ img | img_url: '1600x' }} 1600w,
+      {{ img | img_url: '2000x' }} 2000w
+    "
+    sizes="(min-width: 992px) 50vw, 100vw"
+    width="{{ base_w }}"
+    height="{{ base_h }}"
+    alt="{{ img.alt | escape }}"
+    loading="lazy"
+    class="itr-img"
+  >
+{% else %}
+  <div class="itr-img itr-placeholder"></div>
+{% endif %}
+
+
+      </div>
+
+      <div class="itr-content" style="
+        {% if section.settings.panel_bg != 'rgba(0,0,0,0)' %}background-color: {{ section.settings.panel_bg }};{% endif %}
+        padding: {{ section.settings.panel_padding }};
+      ">
+        {% if section.settings.kicker != blank %}
+          <p class="itr-kicker">{{ section.settings.kicker }}</p>
+        {% endif %}
+        {% if section.settings.title != blank %}
+          <h2 class="itr-title">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <div class="itr-text rte">{{ section.settings.text }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #image-text-rutini-{{ section.id }} {
+      {% if section.settings.section_bg != 'rgba(0,0,0,0)' %}background-color: {{ section.settings.section_bg }};{% endif %}
+      margin: {{ section.settings.section_margin }};
+      padding: {{ section.settings.section_padding }};
+    }
+    #image-text-rutini-{{ section.id }} .itr-page-width { max-width: {{ section.settings.max_width }}; margin: 0 auto; }
+    #image-text-rutini-{{ section.id }} .itr-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    #image-text-rutini-{{ section.id }} .itr-media { position: relative; min-height: 320px; }
+    #image-text-rutini-{{ section.id }} .itr-img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    #image-text-rutini-{{ section.id }} .itr-placeholder { background: #eaeaea; }
+
+    #image-text-rutini-{{ section.id }} .itr-content {
+      display: flex; flex-direction: column; justify-content: center;
+      min-height: 320px;
+    }
+    #image-text-rutini-{{ section.id }} .itr-kicker {
+      letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .25rem; opacity: .8;
+    }
+    #image-text-rutini-{{ section.id }} .itr-title {
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.2; margin: 0 0 .75rem; font-weight: 600;
+    }
+    #image-text-rutini-{{ section.id }} .itr-text { max-width: 58ch; }
+
+    /* Desktop */
+    @media (min-width: 992px) {
+      #image-text-rutini-{{ section.id }} .itr-grid { grid-template-columns: 1fr 1fr; }
+      #image-text-rutini-{{ section.id }} .itr-content { padding: {{ section.settings.panel_padding_desktop }}; }
+      #image-text-rutini-{{ section.id }} .itr-grid.itr-reverse { direction: rtl; }
+      #image-text-rutini-{{ section.id }} .itr-grid.itr-reverse > * { direction: ltr; }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "Imagen + Texto (Rutini)",
+  "settings": [
+    { "type": "checkbox", "id": "full_width", "label": "Ancho completo", "default": true },
+    { "type": "text", "id": "max_width", "label": "Ancho máx. (si no es full width)", "default": "1200px" },
+
+    { "type": "color", "id": "section_bg", "label": "Fondo de la sección", "default": "rgba(0,0,0,0)" },
+    { "type": "text", "id": "section_padding", "label": "Padding sección (ej: 40px 0)", "default": "60px 0" },
+    { "type": "text", "id": "section_margin", "label": "Margen sección (ej: 0 0 40px)", "default": "0" },
+
+    { "type": "image_picker", "id": "image", "label": "Imagen" },
+    { "type": "checkbox", "id": "reverse", "label": "Invertir columnas (imagen a la derecha)", "default": false },
+
+    { "type": "color", "id": "panel_bg", "label": "Fondo del panel de texto", "default": "#f6f6f6" },
+    { "type": "text", "id": "panel_padding", "label": "Padding panel (mobile)", "default": "24px" },
+    { "type": "text", "id": "panel_padding_desktop", "label": "Padding panel (desktop)", "default": "48px" },
+
+    { "type": "text", "id": "kicker", "label": "Kicker"},
+    { "type": "text", "id": "title", "label": "Título", "default": "GUÍA PARA DISFRUTAR CADA COPA" },
+    { "type": "richtext", "id": "text", "label": "Texto", "default": "<p>El equipo enológico de Rutini Wines comparte sus recomendaciones. Vinos elegidos con pasión y maridajes que te darán una guía simple, apasionada y confiable para acompañar cada copa.</p>" }
+  ],
+  "presets": [
+    { "name": "Imagen + Texto (Rutini-style)" }
+  ]
+}
+{% endschema %}

@@ -29,23 +29,7 @@
         <div class="vela-section__inner">
             {%- if section.settings.heading != blank -%}
                 <div class="heading-group">
-                    <h3 class="" style="display: flex; gap: 8px;">
-                        <span style="margin: 0 0 20px;
-    color: #5c5c5c;
-    font-weight: 400;
-    font-size: 1.687rem;
-    display: flex
-;
-    flex-direction: row;
-    column-gap: 10px;
-    flex-wrap: wrap;">Bicicletas y Accesorios</span>
-
-                        {%- if section.settings.button_text != blank -%}
-								<div class="">
-									<a class="" style="font-size: 1rem; color: #0084e0; text-decoration: none;" href="{{ collections[proCollection].url }}" title="{{ section.settings.button_text }}">{{ section.settings.button_text }}</a>
-								</div>
-							{%- endif -%}
-                    </h3>
+                    
                     {%- if section.settings.sub_heading != blank -%}
                         <div class="sub-heading">
                             {{ section.settings.sub_heading }}
@@ -188,13 +172,6 @@
                         "label": "List"
                     }
                 ]
-            },
-            {
-                "type": "text",
-                "id": "button_text",
-                "label": "Button read more",
-                "default": "View all",
-                "info": "Hidden, if it's blank"
             },
             {
                 "type": "header",
