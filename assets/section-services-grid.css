@@ -1,78 +1,68 @@
 .services-grid__container{
-  display:flex; 
-  gap:24px; 
-  flex-wrap:wrap; 
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
   justify-content:center;
 }
+
+/* === Cambios clave acá === */
 .services-grid__item{
   position:relative;
-  width:100%; 
-  max-width:540px; 
-  aspect-ratio:16/9; 
-  background: #f6d5dc; 
+  flex: 0 1 100%;          /* 1 col por defecto */
+  max-width:100%;
+  aspect-ratio:16/9;
+  background:#f6d5dc;
   background-image: var(--bg-image);
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-  border-radius: 12px; 
+  border-radius:12px;
   overflow:hidden;
 }
-.services-grid__link{
-    display:block; 
-    width:100%; 
-    height:100%; 
-    position:relative;}
+/* ========================= */
 
-.services-grid__overlay{
-  position:absolute; 
-  inset:0; 
-  display:flex; 
-  flex-direction:column; 
-  align-items:center; 
-  justify-content:center; 
-  gap:16px;
-  padding:24px;
-  background: rgba(0,0,0,0.45);
-  opacity:0; 
-  transition:opacity .28s ease;
-}
-.services-grid__title{
-  margin:0; 
-  color:#fff;
-  font-family: 'Source Serif 4', serif; 
-  font-weight:700; 
-  font-style:italic;
-  font-size:28px; 
-  text-align:center;
-}
-.services-grid__btn{
-  display:inline-block; 
-  padding:14px 22px; 
-  border-radius:100px;
-  background:#fff; 
-  color:#1e1e1e; border:0.7px solid #1e1e1e; 
-  line-height:1; 
-  font-size:16px;
-}
+/* Hover igual que antes */
+.services-grid__link{ display:block; width:100%; height:100%; position:relative; }
+.services-grid__overlay{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; padding:24px; background:rgba(0,0,0,0.45); opacity:0; transition:opacity .28s ease; }
+.services-grid__title{ margin:0; color:#fff; font-family:'Source Serif 4', serif; font-weight:700; font-style:italic; font-size:28px; text-align:center; }
+.services-grid__btn{ display:inline-block; padding:14px 22px; border-radius:100px; background:#fff; color:#1e1e1e; border:0.7px solid #1e1e1e; line-height:1; font-size:16px; }
 
 @media (hover:hover){
-  .services-grid__item:hover .services-grid__overlay{opacity:1;}
+  .services-grid__item:hover .services-grid__overlay{ opacity:1; }
 }
 
-@media (max-width: 749px){
-  .services-grid__container{
-    gap:16px;
-}
+/* 2 columnas en tablet */
+@media (min-width: 750px){
   .services-grid__item{
-    max-width:100%;
+    flex: 0 1 calc((100% - 24px) / 2);   /* 2 cards con gap de 24px */
+    max-width: calc((100% - 24px) / 2);
+  }
 }
+
+/* 3 columnas en desktop (usa el mismo gap) */
+@media (min-width: 1200px){
+  .services-grid__item{
+    flex: 0 1 calc((100% - 48px) / 3);   /* 3 cards, 2 gaps = 48px */
+    max-width: calc((100% - 48px) / 3);
+  }
+}
+
+/* Mobile: 1 columna y overlay siempre visible */
+@media (max-width: 749px){
+  .services-grid__container{ gap:16px; }
   .services-grid__overlay{
     opacity:1;
     background: linear-gradient(transparent, rgba(0,0,0,.55) 40%);
-    align-items:flex-start; 
-    justify-content:flex-end;
+    align-items:flex-start; justify-content:flex-end;
   }
-  .services-grid__title{
-    font-size:22px; 
-    text-align:left;
+  .services-grid__title{ font-size:22px; text-align:left; }
 }
+
+.services-grid {
+  padding: 0 16px 40px; 
+}
+
+@media (min-width: 1200px){
+  .services-grid {
+    padding: 60px 40px 60px; 
+  }
 }

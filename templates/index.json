@@ -375,6 +375,15 @@
         "column4": 1
       }
     },
+    "titulo_vitrina_1": {
+  "type": "section-title",
+  "settings": {
+    "title": "Selección del Enólogo",
+    "color": "#a8825a",
+    "uppercase": true,
+    "align": "center"
+  }
+},
     "1639385876881b85aa": {
       "type": "product-tab",
       "blocks": {
@@ -444,6 +453,15 @@
     //     "custom_css": ""
     //   }
     //},
+    "titulo_vitrina_2": {
+  "type": "section-title",
+  "settings": {
+    "title": "COMBOS TIENDA",
+    "color": "#a8825a",
+    "uppercase": true,
+    "align": "center"
+  }
+},
     "16303012351fd53818": {
       "type": "product-list",
       "settings": {
@@ -1058,6 +1076,15 @@
         "text_align": "center"
       }
     },
+    "titulo_vitrina_3": {
+  "type": "section-title",
+  "settings": {
+    "title": "Brindis de primavera",
+    "color": "#a8825a",
+    "uppercase": true,
+    "align": "center"
+  }
+},
     "services_grid": {
   "type": "services-grid",
   "blocks": {
@@ -1092,9 +1119,11 @@
   "order": [
     "163948024846cb1ead",
     "1630410045bedb52b5",
+    "titulo_vitrina_1",
     "1639385876881b85aa",
     "home_image_with_text",
     // "1638200046fbf44826",
+    "titulo_vitrina_2",
     "16303012351fd53818",
     // "1638200046fbf44825",
     // "16303012351fd53819",
@@ -1113,6 +1142,7 @@
     "1630517878dbf2fdb0",
     "16393667012ecfc31c",
     "16394740977988931e",
+     "titulo_vitrina_3",
     "services_grid"
   ]
 }

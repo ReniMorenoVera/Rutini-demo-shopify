@@ -1,0 +1,80 @@
+<section id="section-heading-{{ section.id }}" class="section-heading">
+  <div class="{% unless section.settings.full_width %}sh-page-width{% endunless %}">
+    
+    <h2 class="sh-title"
+      {% if section.settings.anchor_id %} id="{{ section.settings.anchor_id | handle }}"{% endif %}
+    >
+      {{ section.settings.title }}
+    </h2>
+
+    {% if section.settings.show_divider %}
+      <div class="sh-divider"></div>
+    {% endif %}
+  </div>
+
+  <style>
+    #section-heading-{{ section.id }}{
+      {% if section.settings.section_bg != 'rgba(0,0,0,0)' %}background-color: {{ section.settings.section_bg }};{% endif %}
+      margin: {{ section.settings.section_margin }};
+      padding: {{ section.settings.section_padding }};
+    }
+    #section-heading-{{ section.id }} .sh-page-width { max-width: {{ section.settings.max_width }}; margin: 0 auto; padding: 0 16px; }
+
+    #section-heading-{{ section.id }} .sh-title{
+      margin: 0;
+      text-align: {{ section.settings.align }};
+      {% if section.settings.uppercase %}text-transform: uppercase;{% endif %}
+      letter-spacing: {{ section.settings.letter_spacing }};
+      color: {{ section.settings.color }};
+      font-weight: {{ section.settings.font_weight }};
+      font-size: {{ section.settings.font_size_mobile }};
+      line-height: 1.2;
+    }
+
+    
+
+    #section-heading-{{ section.id }} .sh-divider{
+      margin: {{ section.settings.divider_margin }};
+      height: {{ section.settings.divider_thickness }};
+      width: {{ section.settings.divider_width }};
+      background-color: {{ section.settings.divider_color }};
+      {% case section.settings.align %}
+        {% when 'left' %} margin-left: 0;
+        {% when 'center' %} margin-left: auto; margin-right: auto;
+        {% when 'right' %} margin-left: auto;
+      {% endcase %}
+    }
+
+    @media (min-width: 992px){
+      #section-heading-{{ section.id }} .sh-title{ font-size: {{ section.settings.font_size_desktop }}; }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "Título de sección",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Título", "default": "TITULO" },
+
+    { "type": "radio", "id": "align", "label": "Alineación", "default": "center",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "center", "label": "Centrada" },
+        { "value": "right", "label": "Derecha" }
+      ]
+    },
+
+    { "type": "color", "id": "color", "label": "Color del título", "default": "#a8825a" },
+
+    { "type": "checkbox", "id": "uppercase", "label": "Mayúsculas", "default": true },
+
+    { "type": "text", "id": "font_size_mobile", "label": "Tamaño móvil", "default": "22px" },
+    { "type": "text", "id": "font_size_desktop", "label": "Tamaño desktop", "default": "34px" },
+    
+  ],
+  "presets": [
+    { "name": "Título" }
+  ]
+}
+{% endschema %}
