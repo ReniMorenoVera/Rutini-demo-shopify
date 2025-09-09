@@ -452,34 +452,34 @@
         "column4": 2
       }
     },
-    "1638200046fbf44825": {
-      "type": "image-list",
-      "blocks": {
-        "1638200046956339fd-0": {
-          "type": "image",
-          "settings": {
-            "width": "col-12",
-            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-15_00dda57d-a63e-475f-9928-ba008fc0239e.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-17.jpg",
-            "link": "shopify://collections/all"
-          }
-        }
-      },
-      "block_order": [
-        "1638200046956339fd-0"
-      ],
-      "settings": {
-        "full_with": false,
-        "color_bg": "rgba(0,0,0,0)",
-        "padding_block": "30px 0",
-        "margin_block": "0 0 60px",
-        "image_ratio": "adapt",
-        "crop": false,
-        "effect": "effectNone",
-        "space_between": "4",
-        "custom_css": ""
-      }
-    },
+    // "1638200046fbf44825": {
+    //   "type": "image-list",
+    //   "blocks": {
+    //     "1638200046956339fd-0": {
+    //       "type": "image",
+    //       "settings": {
+    //         "width": "col-12",
+    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-15_00dda57d-a63e-475f-9928-ba008fc0239e.jpg",
+    //         "image_mobile": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-17.jpg",
+    //         "link": "shopify://collections/all"
+    //       }
+    //     }
+    //   },
+    //   "block_order": [
+    //     "1638200046956339fd-0"
+    //   ],
+    //   "settings": {
+    //     "full_with": false,
+    //     "color_bg": "rgba(0,0,0,0)",
+    //     "padding_block": "30px 0",
+    //     "margin_block": "0 0 60px",
+    //     "image_ratio": "adapt",
+    //     "crop": false,
+    //     "effect": "effectNone",
+    //     "space_between": "4",
+    //     "custom_css": ""
+    //   }
+    // },
     "16303012351fd53819": {
       "type": "product-list",
       "settings": {
@@ -1069,16 +1069,8 @@
         "link": "#"
       }
     },
-    "service4": {
-      "type": "service",
-      "settings": {
-        "title": "Bespoke Fabrication",
-        "background_color": "#DADACE",
-        "link": "#"
-      }
-    }
   },
-  "block_order": ["service1", "service2", "service3", "service4"]
+  "block_order": ["service1", "service2", "service3"]
 }
   },
   "order": [
@@ -1087,7 +1079,7 @@
     "1639385876881b85aa",
     "1638200046fbf44826",
     "16303012351fd53818",
-    "1638200046fbf44825",
+    // "1638200046fbf44825",
     "16303012351fd53819",
     "gallery_image_7A7eR8",
     "1638203272229f5ce0",
