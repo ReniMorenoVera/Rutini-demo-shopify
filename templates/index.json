@@ -416,34 +416,34 @@
         "column4": 2
       }
     },
-    "1638200046fbf44826": {
-      "type": "image-list",
-      "blocks": {
-        "1638200046956339fd-0": {
-          "type": "image",
-          "settings": {
-            "width": "col-12",
-            "image": "shopify://shop_images/Must_-_Web_-_Noviembre-05_4271e72c-c15e-4670-9c04-df07837a0941.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-03_3.jpg",
-            "link": "shopify://collections/all"
-          }
-        }
-      },
-      "block_order": [
-        "1638200046956339fd-0"
-      ],
-      "settings": {
-        "full_with": false,
-        "color_bg": "rgba(0,0,0,0)",
-        "padding_block": "30px 0",
-        "margin_block": "0 0 60px",
-        "image_ratio": "adapt",
-        "crop": true,
-        "effect": "effectNone",
-        "space_between": "4",
-        "custom_css": ""
-      }
-    },
+    // "1638200046fbf44826": {
+    //   "type": "image-list",
+    //   "blocks": {
+    //     "1638200046956339fd-0": {
+    //       "type": "image",
+    //       "settings": {
+    //         "width": "col-12",
+    //         "image": "shopify://shop_images/Must_-_Web_-_Noviembre-05_4271e72c-c15e-4670-9c04-df07837a0941.jpg",
+    //         "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-03_3.jpg",
+    //         "link": "shopify://collections/all"
+    //       }
+    //     }
+    //   },
+    //   "block_order": [
+    //     "1638200046956339fd-0"
+    //   ],
+    //   "settings": {
+    //     "full_with": false,
+    //     "color_bg": "rgba(0,0,0,0)",
+    //     "padding_block": "30px 0",
+    //     "margin_block": "0 0 60px",
+    //     "image_ratio": "adapt",
+    //     "crop": true,
+    //     "effect": "effectNone",
+    //     "space_between": "4",
+    //     "custom_css": ""
+    //   }
+    //},
     "16303012351fd53818": {
       "type": "product-list",
       "settings": {
@@ -1092,9 +1092,9 @@
   "order": [
     "163948024846cb1ead",
     "1630410045bedb52b5",
-    "home_image_with_text",
     "1639385876881b85aa",
-    "1638200046fbf44826",
+    "home_image_with_text",
+    // "1638200046fbf44826",
     "16303012351fd53818",
     // "1638200046fbf44825",
     // "16303012351fd53819",

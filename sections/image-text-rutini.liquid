@@ -1,10 +1,3 @@
-{% comment %}
-  Section: Image + Text (Rutini-style)
-  - 2 columnas: imagen izquierda / contenido derecha
-  - Panel derecho con color de fondo configurable
-  - Stack en mobile
-{% endcomment %}
-
 <section id="image-text-rutini-{{ section.id }}" class="image-text-rutini">
   <div class="itr-container {% if section.settings.full_width == false %}itr-page-width{% endif %}">
     <div class="itr-grid {% if section.settings.reverse %}itr-reverse{% endif %}">
@@ -120,7 +113,7 @@
     { "type": "richtext", "id": "text", "label": "Texto", "default": "<p>El equipo enológico de Rutini Wines comparte sus recomendaciones. Vinos elegidos con pasión y maridajes que te darán una guía simple, apasionada y confiable para acompañar cada copa.</p>" }
   ],
   "presets": [
-    { "name": "Imagen + Texto (Rutini-style)" }
+    { "name": "Imagen + Texto (Rutini)" }
   ]
 }
 {% endschema %}
