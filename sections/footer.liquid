@@ -1,0 +1,261 @@
+<footer id="footer" class="footer">
+  <div
+    class="footer-inner position-relative lazyload js"
+    style="background: black; padding: 20px"
+  >
+  <div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+
+            <div>
+                <img src="/cdn/shop/t/19/assets/logo.svg?v=173018033744185636721756954952" alt="">
+            </div>
+
+            <div>
+                <div style="margin-bottom: 10px;">
+                    <p style="margin: 0;">Mesa de Ayuda:</p>
+                    <p style="margin: 0;">info@mail.com</p>
+                </div>
+
+                <div style="display: flex; gap : 10px">
+                    <img style="width:20px; height: 20px;"
+                        src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/c2057ca0-eabd-4e33-a80f-eb5a8446acdf___6d7388822d544a76ce46a66d3fb5747f.png"
+                        alt="">
+                    <p>11 1111 1111</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="display: flex; gap : 20px; align-items: flex-end;">
+            <img style="width:38px; height: 38px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/1fc53164-ec77-4d1b-a320-5ec161091711___36be8332247ea8a976d7dc8c3330a558.webp"
+                alt="">
+            <img style="width:38px; height: 38px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/f6cd6ab5-7116-467f-8305-5e6f1cab215d___c9e9d986afb5aef349d39b405225b5d5.png"
+                alt="">
+            <img style="width:38px; height: 38px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/8487b892-ccd7-4d74-9a2e-f1261feff092___11204ee653d507d77d315274ba6d2552.png"
+                alt="">
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end;">
+            <p>Medios de pago</p>
+            <p>Términos y Condiciones</p>
+            <button
+                style="background-color: transparent; padding: 11px 12px; border: 1px solid white; border-radius: 20px; color: white;">Arrepentimiento
+                de compra</button>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-around; border-top: 1px solid white; padding-top: 20px; margin-top: 20px; flex-wrap: wrap;">
+        <div style="display: flex; gap : 10px">
+            <p>Powered by Pierce commerce</p>
+            <img style="width:76px; height: 17px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/pierce-logo___216532d0ea67b678bb537aada0dc23e0.png"
+                alt="">
+        </div>
+
+        <div style="display: flex;">
+            <img style="width:36px; height: 50px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/fiscal___ca4f367f83d5a92fe6b7564b2b4bf92b.png"
+                alt="">
+            <img style="width:117px; height: 50px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/datos-personales___b2c50da9dc93c212c859de0f431d6f6c.png"
+                alt="">
+            <img style="width:150px; height: 50px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/cace___acd9b4fd34f8d2ec36c352b2fed6adb5.png"
+                alt="">
+        </div>
+    </div>
+</div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer-bg-image",
+      "label": "Footer background Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "newsletter_title",
+          "placeholder": "Title for Block",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "newsletter_description",
+          "placeholder": "Description for Block",
+          "label": "Description"
+        },
+        {
+          "type": "checkbox",
+          "id": "newsletter_mailchimp",
+          "label": "Use MailChimp",
+          "default": true
+        },
+        {
+          "type": "paragraph",
+          "content": "Uncheck if You use Newsletter of Shopify. Email will be saved to shopify customer. Admin -> Customers -> Accepts Marketting. You must send invite account for customer."
+        },
+        {
+          "type": "text",
+          "id": "newsletter_form_action",
+          "label": "MailChimp form action URL",
+          "info": "[Where do I find my MailChimp form action URL?](https:\/\/www.youtube.com/watch?v=mQ6UFLP_iEI)"
+        }
+      ]
+    },
+    {
+      "type": "contact_info",
+      "name": "Contact info",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Block Contact info"
+        },
+        {
+          "type": "text",
+          "id": "contactinfo_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "contactinfo_logo",
+          "label": "Logo footer"
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "min": 50,
+          "max": 250,
+          "step": 10,
+          "default": 100,
+          "unit": "px",
+          "label": "Custom logo width"
+        },
+        {
+          "type": "textarea",
+          "id": "contactinfo_desc",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "contactinfo_add",
+          "label": "Adress",
+          "default": "1234 Heaven Stress, Beverly Hill."
+        },
+        {
+          "type": "text",
+          "id": "contactinfo_phone",
+          "label": "Phone",
+          "default": "Telephone: +01 234 567 89"
+        },
+        {
+          "type": "text",
+          "id": "contactinfo_email",
+          "label": "Email",
+          "default": "Email: info@gmail.com"
+        },
+        {
+          "type": "text",
+          "id": "contactinfo_time",
+          "label": "Time",
+          "default": "8:00 - 19:00, Monday - Saturday"
+        },
+        {
+          "type": "header",
+          "content": "Payment"
+        },
+        {
+          "type": "checkbox",
+          "id": "payment_enable",
+          "label": "Enable Payment"
+        },
+        {
+          "type": "image_picker",
+          "id": "payment_image",
+          "label": "Payment Logo"
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "name": "Menu",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Link List",
+          "label": "Heading",
+          "info": "A heading is required to display the menu."
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "Menu",
+          "info": "Displays only top-level menu items."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "html",
+          "id": "subtext",
+          "default": "<p>Share store details, promotions, or brand content with your customers.</p>",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "copyright",
+      "name": "CopyRight",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Block Copyright"
+        },
+        {
+          "type": "text",
+          "id": "footer_copyright",
+          "label": "Copyright",
+          "placeholder": "Copyright"
+        },
+        {
+          "type": "header",
+          "content": "Social Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "social_enable",
+          "label": "Social enable?"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

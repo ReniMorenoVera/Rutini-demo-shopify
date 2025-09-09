@@ -1,0 +1,260 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'collection-sidebar.css' | asset_url | stylesheet_tag }}
+{{ 'ion.rangeSlider.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ion.rangeSlider.min.js' | asset_url }}" defer="defer"></script>
+
+{%- assign col-xl = section.settings.products_ditem_per_row -%}
+{%- assign col-md = section.settings.products_titem_per_row -%}
+{%- assign col =  section.settings.products_mitem_per_row -%}
+<div id="ProductGridContainer" class="collection-page">
+	<div class="container">
+		<div class="row">
+			{%- if section.settings.sidebar_template == 'sidebarnone'-%}
+				<div class="collection-sidebar sidebar-fullWith col-12 col-lg-3">
+					{% include 'collection-sidebar'%}
+				</div>
+			{%- endif -%}
+			{%- if section.settings.sidebar_template == 'sidebarleft'-%}
+				<div class="collection-sidebar sidebar-left col-12 col-lg-3">
+					{% include 'collection-sidebar'%}
+				</div>
+			{%- endif -%}
+			{%- if section.settings.sidebar_template == 'sidebartop'-%}
+				{%- include 'product-filter-top' -%}
+			{%- endif -%}
+			<div class="collection-content mb-4 col-12 {% if section.settings.sidebar_template  == 'sidebarleft' or section.settings.sidebar_template  == 'sidebarright' %}col-lg-9{% endif %}">
+				<div id="CollectionProductGrid" class="{% if section.settings.sidebar_template  == 'sidebarleft'%} ms-xl-3{% endif %}{% if section.settings.sidebar_template  == 'sidebarright' %} me-xl-3{% endif %}">
+					{%- paginate collection.products by section.settings.products_per_page -%}
+					{%- include 'collection-header' -%}
+						<div class="collection position-relative">
+							{% render 'preloading', preload_class: 'position-absolute' %}
+							{%- if collection.products.size == 0 -%}
+								<div class="collection collection--empty" id="main-collection-product-grid" data-id="{{ section.id }}">
+									<div class="title-wrapper center">
+										<h2 class="title title--primary">
+											{{ 'sections.collection_template.empty' | t }}<br>
+											{{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
+										</h2>
+									</div>
+								</div>
+							{%- else -%}
+								<div id="main-collection-product-grid" data-id="{{ section.id }}" class="row g-3 g-md-4 row-cols-{{col}} row-cols-md-{{col-md}} row-cols-xl-{{col-xl}} gap-mobile">
+									{%- for product in collection.products -%}
+										<div class="col">
+											{% include 'product-grid-item' %}
+										</div>
+									{%- endfor -%}
+								</div>
+								{%- if paginate.pages > 1 -%}
+									{% render 'pagination', paginate: paginate, anchor: '', class: 'pagination-wrapper pt-5' %}
+								{%- endif -%}
+							{%- endif -%}
+						</div>
+					{%- endpaginate -%}
+				</div>
+			</div>
+			{%- if section.settings.sidebar_template == 'sidebarright'-%}
+				<div class="collection-sidebar sidebar-right col-12 col-lg-3">
+					{% include 'collection-sidebar'%}
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+</div>
+{% schema %}
+{
+	"name": "Collection pages",
+	"settings": [
+		{
+			"type": "select",
+			"id": "sidebar_template",
+			"label": "Sidebar template",
+			"default": "sidebarleft",
+			"options": [
+				{
+					"label": "Full with",
+					"value": "sidebarnone"
+				},
+				{
+					"label": "Sidebar Right",
+					"value": "sidebarright"
+				},
+				{
+					"label": "Sidebar Left",
+					"value": "sidebarleft"
+				},
+				{
+					"label": "Sidebar Top",
+					"value": "sidebartop"
+				}
+			]
+		},
+		{
+			"type": "range",
+			"id": "products_per_page",
+			"min": 6,
+			"max": 60,
+			"step": 1,
+			"default": 6,
+			"label": "Products per page"
+		},
+		{
+			"type": "range",
+			"id": "products_ditem_per_row",
+			"min": 1,
+			"max": 6,
+			"step": 1,
+			"default": 4,
+			"label": "Products item per row",
+			"info": "On the Desktop"
+		},
+		{
+			"type": "range",
+			"id": "products_titem_per_row",
+			"min": 1,
+			"max": 4,
+			"step": 1,
+			"default": 3,
+			"label": "Products item per row",
+			"info": "On the Tablets"
+		},
+		{
+			"type": "range",
+			"id": "products_mitem_per_row",
+			"min": 1,
+			"max": 3,
+			"step": 1,
+			"default": 2,
+			"label": "Products item per row",
+			"info": "On the Mobile"
+		}
+  	],
+  	"blocks": [
+		{
+			"type": "categories",
+			"name": "Categories",
+			"limit": 2,
+			"settings": [
+				{
+					"type": "text",
+					"id": "categories_title",
+					"label": "Title"
+				},
+				{
+					"type": "link_list",
+					"id": "categories_handle",
+					"label": "Category menu",
+					"info": "Choose menu for block. Add new menu: Admin->Navigation->Menu"
+				}
+			]
+		},
+		{
+			"type": "filter",
+			"name": "Product filter",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "paragraph",
+					"content": "[Customize filters](\/admin\/menus)"
+				},
+				{
+					"type": "text",
+					"id": "filter_title",
+					"label": "Heading",
+					"default": "Filter"
+				},
+				{
+					"type": "checkbox",
+					"id": "enable_sorting",
+					"default": true,
+					"label": "Enable sorting"
+				}
+			]
+		},
+		{
+			"type": "productlist",
+			"name": "Product sidebar",
+			"limit": 2,
+			"settings": [
+				{
+					"type": "text",
+					"id": "product_title",
+					"label": "Title"
+				},
+				{
+					"type": "collection",
+					"id": "collection_handle",
+					"label": "Collection"
+				},
+				{
+					"type": "range",
+					"id": "limit",
+					"min": 1,
+					"max": 20,
+					"step": 1,
+					"label": "Limit",
+					"default": 4
+				}
+			]
+		},
+		{
+			"type": "banner",
+			"name": "Banner",
+			"limit": 2,
+			"settings": [
+				{
+					"type": "url",
+					"id": "banner_url",
+					"label": "Banner link"
+				},
+				{
+					"type": "image_picker",
+					"id": "banner_img",
+					"label": "Banner image"
+				}
+			]
+		},
+		{
+			"type": "tags",
+			"name": "Product Tags",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "text",
+					"id": "tags_title",
+					"label": "Heading",
+					"default": "Tags"
+				},
+				{
+					"type": "range",
+					"id": "tags_limit",
+					"min": 1,
+					"max": 20,
+					"step": 1,
+					"label": "Number of tags",
+					"default": 10
+				}
+			]
+		},
+		{
+			"type": "html",
+			"name": "Custom html",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "text",
+					"id": "html_title",
+					"label": "Heading",
+					"default": "Heading"
+				},
+				{
+					"type": "html",
+					"id": "html_content",
+					"label": "content",
+					"default": "<h4>Use HTML to format your text so it can be easily read.</h4>This text can be used to share information about your brand with customers.</div>"
+				}
+			]
+		}
+    ]
+}
+{% endschema %}

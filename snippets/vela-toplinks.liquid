@@ -1,0 +1,24 @@
+{% if shop.customer_accounts_optional or shop.customer_accounts_enabled %}
+	{% capture fullname %}{{ customer.first_name }}{% endcapture %}
+	{% assign logout = 'customer.log_out' | t %}
+	{% assign login = 'customer.log_in' | t %}
+	{% assign register = 'customer.login_page.sign_in' | t %}
+	<div class="velaTopLinks">
+		<ul class="d-flex list-unstyled m-0 text-uppercase">
+			<li class="d-none d-sm-block">
+				<form action="{{ routes.cart_url }}" method="post">
+					<button class="text border-0 bg-transparent text-uppercase" type="submit" name="checkout">
+						{{ 'sections.cart.checkout' | t }}
+					</button>
+				</form>
+			</li>
+			{% if customer  %}
+				<li class="ms-3"><a href="{{routes.account_url}}" title="{{ 'customer.account.title' | t }}">{{ 'customer.account.title' | t }}</a></li>              
+				<li class="ms-3">{{ logout | customer_logout_link }}</li>
+			{% else %}
+				<li class="ms-3">{{ login | customer_login_link }}</li>
+				<li class="ms-3">{{ register | customer_register_link }}</li>
+			{% endif %}
+		</ul>
+	</div>
+{% endif %}

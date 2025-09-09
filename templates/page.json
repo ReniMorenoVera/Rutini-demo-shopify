@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb-page",
+      "settings": {
+        "padding_block": "",
+        "margin_block": "0 0 60px",
+        "bgimage": true,
+        "image": "shopify://shop_images/breadcumd.jpg",
+        "breadcrumb_title": "Our story",
+        "enable_title": "desktop",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_color_heading": "rgba(0,0,0,0)",
+        "breadcrumb_color": "rgba(0,0,0,0)",
+        "breadcrumb_color_link": "rgba(0,0,0,0)",
+        "breadcrumb-height": "200px",
+        "breadcrumb-mheight": "200px",
+        "text-align": "center"
+      }
+    },
+    "main": { "type": "main-page", "settings": {} }
+  },
+  "order": ["breadcrumb", "main"]
+}

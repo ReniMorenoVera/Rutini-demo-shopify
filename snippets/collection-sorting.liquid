@@ -1,0 +1,10 @@
+<div class="collection-sortby">
+  <div class="collection-sortby__label">{{ 'collections.sorting.title' | t }}</div>
+  <div class="collection-sortby__list">
+    <select name="sortby" class="js-sortby collection-sortby__select">
+      {% for option in collection.sort_options %}
+        <option value="{{ option.value }}"{% if sort_by == option.value %} selected="selected"{% endif %}>{{ option.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>

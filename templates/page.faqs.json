@@ -1,0 +1,95 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb-page",
+      "settings": {
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "bgimage": false,
+        "breadcrumb_title": "Preguntas frecuentes",
+        "enable_title": "none",
+        "breadcrumb_bg": "#ffffff",
+        "breadcrumb_color_heading": "#201f1f",
+        "breadcrumb_color": "#79b6c8",
+        "breadcrumb_color_link": "#201f1f",
+        "breadcrumb-height": "60px",
+        "breadcrumb-mheight": "60px",
+        "text-align": "start"
+      }
+    },
+    "main": {
+      "type": "main-page-faqs",
+      "blocks": {
+        "4b0ae87f-12aa-4ab4-a2af-220cf225efbe": {
+          "type": "faq",
+          "settings": {
+            "title": "Cambios y devoluciones",
+            "content": "En Must, queremos que estés completamente satisfecho con tu compra. Si necesitas realizar un cambio o devolución, puedes hacerlo dentro de los 30 días posteriores a la compra. Asegúrate de que el producto esté en su estado original, sin usar y con todas las etiquetas intactas. Para iniciar el proceso, contáctanos a través de nuestro formulario de contacto o llámanos al número proporcionado en nuestro sitio web. Te guiaremos paso a paso para hacer el cambio o devolución sin complicaciones."
+          }
+        },
+        "81ad3331-1a26-4ee8-a748-870323ebab23": {
+          "type": "faq",
+          "settings": {
+            "title": "Envíos y entregas",
+            "content": "Ofrecemos envío gratuito en pedidos superiores a $50. Los tiempos de entrega varían según la ubicación, pero generalmente recibirás tu pedido dentro de 3 a 7 días hábiles. También ofrecemos opciones de envío exprés por un costo adicional. Una vez que tu pedido sea enviado, recibirás un correo electrónico con la información de seguimiento para que puedas monitorizar la entrega en tiempo real."
+          }
+        },
+        "ad0a2930-a5d4-41a0-9b25-6eeb84fbf6f9": {
+          "type": "faq",
+          "settings": {
+            "title": "Promociones y descuentos",
+            "content": "Ofrecemos regularmente promociones y descuentos exclusivos a nuestros clientes registrados. Suscríbete a nuestro boletín para recibir las últimas ofertas directamente en tu correo electrónico. También puedes encontrar códigos de descuento en nuestras redes sociales. Asegúrate de ingresar el código de descuento durante el proceso de compra para aprovechar las ofertas."
+          }
+        },
+        "2aae8f27-e9fe-4b45-a239-c124759b73f4": {
+          "type": "faq",
+          "settings": {
+            "title": "Registro y cuenta de usuario",
+            "content": "Crear una cuenta en Must es rápido y fácil. Al registrarte, podrás disfrutar de beneficios como el seguimiento de tus pedidos, historial de compras y acceso a ofertas exclusivas. Para crear una cuenta, haz clic en 'Registrarse' en la parte superior de nuestra página y sigue las instrucciones. Si olvidas tu contraseña, puedes restablecerla fácilmente a través de la opción '¿Olvidaste tu contraseña?'."
+          }
+        },
+        "587d8d84-7a27-48c2-9d3e-a5b3b879097d": {
+          "type": "faq",
+          "settings": {
+            "title": "Políticas de privacidad",
+            "content": "En Must, valoramos tu privacidad y nos comprometemos a proteger tu información personal. Solo recopilamos los datos necesarios para procesar tu pedido y mejorar tu experiencia de compra. No compartimos tu información con terceros sin tu consentimiento. Puedes leer nuestra Política de Privacidad completa en la sección correspondiente de nuestro sitio web para más detalles."
+          }
+        },
+        "937a5690-64b2-44b8-a7d2-71fc7ce64211": {
+          "type": "faq",
+          "settings": {
+            "title": "Contacto y soporte",
+            "content": "Si tienes alguna pregunta o necesitas asistencia, nuestro equipo de soporte está aquí para ayudarte. Puedes contactarnos a través de nuestro formulario de contacto en el sitio web, enviarnos un correo electrónico a soporte@must.com o llamarnos al 1-800-123-4567. Nuestro horario de atención es de lunes a viernes, de 9:00 a.m. a 6:00 p.m. (hora local)."
+          }
+        }
+      },
+      "block_order": [
+        "4b0ae87f-12aa-4ab4-a2af-220cf225efbe",
+        "81ad3331-1a26-4ee8-a748-870323ebab23",
+        "ad0a2930-a5d4-41a0-9b25-6eeb84fbf6f9",
+        "2aae8f27-e9fe-4b45-a239-c124759b73f4",
+        "587d8d84-7a27-48c2-9d3e-a5b3b879097d",
+        "937a5690-64b2-44b8-a7d2-71fc7ce64211"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main"
+  ]
+}

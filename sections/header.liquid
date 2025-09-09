@@ -1,0 +1,881 @@
+<header class="header">
+  <div
+    data-section-id="header"
+    data-section-type="header-section"
+    class="header-wrap {% if section.settings.enable_sticky_header %}sticky-header{% endif %}"
+    style="background-color: black;"
+  >
+    <div class="container{%if section.settings.fullwidth %}-fluid{% endif %}">
+      <div
+        class="header__inner logo-{{ section.settings.logo_position }}"
+        {% if section.settings.padding_block != blank %}
+          style="padding: {{ section.settings.padding_block }};"
+        {% endif %}
+      >
+        <div class="row align-items-center justify-content-between">
+          <div class="header-menu-mobile d-block d-lg-none{% if section.settings.logo_position== 'left' %} col-auto{% else %} col{% endif %}">
+            {%- if section.settings.menu != blank -%}
+              {%- render 'header-menu-mobile' -%}
+            {%- endif -%}
+          </div>
+          {%- assign mw_logo = section.settings.logo_width | plus: 30 | append: 'px' -%}
+          <div
+            class="header-left px-0 px-sm-3 col {% if section.settings.logo_position == 'left' %}col-lg-auto{% endif %}"
+            style="max-width: {{ mw_logo }}"
+          >
+            {%- if request.page_type == 'index' -%}
+              <h1 class="header__heading d-flex justify-content-center mb-0">
+            {%- endif -%}
+            <a href="{{ routes.root_url }}" class="header__heading-link d-flex">
+              {%- assign logo_size = section.settings.logo_width | append: 'x' -%}
+              {%- assign size_rentina = section.settings.logo_width | times: 2 -%}
+              <img
+                width="auto"
+                height="auto"
+                class="header__heading-logo img-fluid"
+                src="{{ 'logo.svg' | asset_url }}"
+                loading="lazy"
+                alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+              >
+            </a>
+            {%- if request.page_type == 'index' -%}
+              </h1>
+            {%- endif -%}
+          </div>
+          <div class="header-right d-flex align-items-center {% if section.settings.logo_position == 'left' %}col-auto{% else %}col{% endif %}">
+            <div class="header__search">
+              <a
+                class="header__icon header__icon--search modal__toggle"
+                href="#searchTop"
+                role="button"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                aria-controls="searchTop"
+              >
+                <span>
+                  {% render 'icons',
+                    icon: 'search',
+                    class: 'modal__toggle-open icon icon-search',
+                    attr: 'width="18px" height="24px"'
+                  %}
+                </span>
+              </a>
+            </div>
+            {%- include 'header-cart' -%}
+            {%- render 'header-search' -%}
+          </div>
+
+          <div>
+            <style>
+                @media (min-width: 1025px) {
+                    .solo-desktop {
+                        display: block;
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    .solo-desktop {
+                        display: none;
+                    }
+                }
+
+                .categoria-container {
+                    position: relative;
+                    padding-bottom: 10px;
+                }
+
+                .categoria {
+                    display: inline-block;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    color: white;
+                }
+                .categoria:hover {
+                    border-bottom: 1px solid white;
+                }
+
+                .subcategorias {
+                    position: absolute;
+                    background-color: white;
+                    color: white;
+                    padding: 10px;
+                    display: none;
+                    z-index: 1000;
+                    width: 100vw;
+                    left: -30px;
+                    top: 30px;
+                }
+
+                .subcategorias ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    color: black;
+                    display: flex;
+                    flex-direction: row;
+                    text-decoration: none;
+                    font-size: 16px;
+                    line-height: 2.14;
+                    font-weight: 700;
+                    margin: 0;
+                    justify-content: space-around;
+                } 
+                .subcategorias ul li {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    color: black;
+                    display: flex;
+                    flex-direction: row;
+                    text-decoration: none;
+                    font-size: 16px;
+                    line-height: 2.14;
+                    font-weight: 700;
+                    margin: 0;
+                    width: 200px;
+                    justify-content: center;
+                }
+            </style>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const categorias = document.querySelectorAll('.categoria');
+                const subcategorias = document.querySelectorAll('.subcategorias');
+                const mainContent = document.getElementById('MainContent');
+                const headerRight = document.querySelector('.header-right');
+                let categoriaActiva = null;
+
+                // Mostrar subcategoría al hacer hover en categoría
+                categorias.forEach(cat => {
+                  cat.addEventListener('mouseenter', () => {
+                    const tipo = cat.dataset.categoria;
+
+                    // Ocultar todos los submenús
+                    subcategorias.forEach(sub => sub.style.display = 'none');
+                    categorias.forEach(c => c.classList.remove('active'));
+
+                    // Mostrar el submenú correspondiente y activar categoría
+                    document.querySelector(`.subcategorias-${tipo}`).style.display = 'block';
+                    cat.classList.add('active');
+                    categoriaActiva = cat;
+                  });
+                });
+
+                // Mantener visible si entro al submenú
+                subcategorias.forEach(sub => {
+                  sub.addEventListener('mouseenter', () => {
+                    sub.style.display = 'block';
+                  });
+                });
+
+                // Función para ocultar todos los submenús
+                function ocultarSubmenus() {
+                  subcategorias.forEach(sub => sub.style.display = 'none');
+                  categorias.forEach(c => c.classList.remove('active'));
+                  categoriaActiva = null;
+                }
+
+                // Cerrar al entrar en MainContent o header-right
+                if (mainContent) {
+                  mainContent.addEventListener('mouseenter', ocultarSubmenus);
+                }
+                if (headerRight) {
+                  headerRight.addEventListener('mouseenter', ocultarSubmenus);
+                }
+              });
+            </script>
+
+<style>
+  .categoria.active {
+    border-bottom: 1px solid white;
+  }
+</style>
+
+
+
+            <div class="solo-desktop" style="color: white;">
+
+                <div class="categoria-container">
+                  <div style="margin: 0 auto; width: fit-content;">
+                    <div class="categoria" data-categoria="modal">Moda</div>
+                    <div class="categoria" data-categoria="maquillaje">Maquillaje</div>
+                  </div>
+
+                    <div class="subcategorias-modal subcategorias">
+                      <div style="max-width: 1024px; margin: 0 auto;">
+                        <ul>
+                          <li>Vestidos</li>
+                          <li>Faldas</li>
+                          <li>Accesorios</li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+                    <div class="subcategorias-maquillaje subcategorias">
+                        <div style="max-width: 1024px; margin: 0 auto;">
+                          <ul>
+                            <li>Labiales</li>
+                            <li>Sombras</li>
+                            <li>Brochas</li>
+                          </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_button",
+      "label": "Botón para abrir el menú",
+      "default": "Menú"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Full width?",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "padding_block",
+      "label": "Padding",
+      "info": "Ex: 0px 0px 0px 0px"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo black"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 100,
+      "unit": "px",
+      "label": "Custom logo width"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Main menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "Enable sticky header",
+      "info": "Header shows on the screen as customers scroll up."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Megamenu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menu item name",
+          "info": "Menu item of main-menu. Menu item has dropdown megamenu.[guideline](https:\/\/velatheme.com\/guide\/velatheme-v2\/main_menu.html)"
+        },
+        {
+          "type": "text",
+          "id": "menu_width",
+          "label": "Item max width(px)",
+          "info": "ex: 800"
+        },
+        {
+          "type": "select",
+          "id": "menu_align",
+          "label": "Menu Alignment",
+          "default": "start-0",
+          "options": [
+            {
+              "value": "start-0",
+              "label": "Left"
+            },
+            {
+              "value": "start-0 end-0",
+              "label": "Center"
+            },
+            {
+              "value": "end-0",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "1. Block navigation",
+          "info": "Admin -> Navigation -> Menu"
+        },
+        {
+          "type": "checkbox",
+          "id": "menu",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "menu_order",
+          "label": "Order",
+          "default": "1",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "menu_col",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "menu_menu_col",
+          "label": "Width of each menu",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "2. Block products"
+        },
+        {
+          "type": "checkbox",
+          "id": "products",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "products_order",
+          "label": "Order",
+          "default": "2",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "products_col",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "products_title",
+          "label": "Heading"
+        },
+        {
+          "type": "collection",
+          "id": "products_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "products_limit",
+          "label": "Limit",
+          "default": "2"
+        },
+        {
+          "type": "header",
+          "content": "3. Block html"
+        },
+        {
+          "type": "checkbox",
+          "id": "html",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "html_order",
+          "label": "Order",
+          "default": "3",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "html_col",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "html_title",
+          "label": "Heading"
+        },
+        {
+          "type": "html",
+          "id": "html_content",
+          "label": "Content HTML",
+          "info": "You can input HTML code, img tag, video code, ..."
+        },
+        {
+          "type": "header",
+          "content": "4. Block banner"
+        },
+        {
+          "type": "checkbox",
+          "id": "banner",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "banner_order",
+          "label": "Order",
+          "default": "4",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "banner_col",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner image"
+        },
+        {
+          "type": "url",
+          "id": "banner_link",
+          "label": "Banner URL"
+        },
+        {
+          "type": "header",
+          "content": "5. Collection list"
+        },
+        {
+          "type": "checkbox",
+          "id": "collection_enable",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "collection_order",
+          "label": "Order",
+          "default": "5",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "collection_title",
+          "label": "Block Title"
+        },
+        {
+          "type": "select",
+          "id": "colllection_col",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "colllection_col_item",
+          "label": "Width of item",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection1",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection2",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection3",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection4",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection5",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection6",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection7",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection8",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection9",
+          "label": "Select Collection"
+        },
+        {
+          "type": "collection",
+          "id": "velamenu_list_collection10",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  const announcementBar = document.querySelector('.announcement-bar');
+  const stickyHeader = document.querySelector('#shopify-section-header');
+  
+  function updateHeaderPosition() {
+      const announcementHeight = announcementBar.offsetHeight;
+      stickyHeader.style.top = `${announcementHeight}px`;
+  }
+  
+  updateHeaderPosition();
+  
+  window.addEventListener('resize', updateHeaderPosition);
+</script>

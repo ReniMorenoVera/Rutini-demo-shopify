@@ -1,0 +1,56 @@
+.collection-image:before {
+  content: "";
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.collection-image .card__image {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.collection-content {
+  bottom: 20px;
+  width: 100%;
+  padding: 20px 45px;
+  left: 0;
+  z-index: 10;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden; }
+  .collection-content .btn-link a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 3px; }
+    .collection-content .btn-link a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary); }
+
+.collection-list__item .collection-title a {
+  color: #fff; }
+  .collection-list__item .collection-title a:hover {
+    color: var(--primary); }
+
+.collection-list__item:hover .collection-image:before {
+  opacity: 1;
+  visibility: visible; }
+
+.collection-list__item:hover .collection-image .card__image {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.collection-list__item:hover .collection-content {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1; }

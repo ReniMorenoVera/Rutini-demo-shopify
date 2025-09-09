@@ -1,0 +1,27 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "50px 0",
+        "margin_block": "",
+        "heading": "Oops! Parece que esta página no existe.",
+        "sub_heading": "",
+        "info": "Prueba regresar a la página anterior o usa el menú o el buscador para encontrar lo que estás buscando."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

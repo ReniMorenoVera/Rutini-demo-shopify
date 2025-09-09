@@ -1,0 +1,47 @@
+<article class="article blog__{{ section.settings.blog_style }} pb-4 pb-sm-5">
+    {% unless article.image == blank %}
+        <div class="article__image mb-3">
+            <a class="article__featured-image-link" href="{{ article.url }}">
+                {% include 'img-global', image: article.image, image_square: image_square , crop: crop %}
+            </a>
+        </div>
+    {% endunless %}
+
+    <div class="article__content mb-3">
+        <h4 class="article__title">
+            <a href="{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a>
+        </h4>
+        <div class="article__meta d-flex flex-wrap align-items-center">
+            {%- if section.settings.blog_author -%}
+                {% capture author %}{{ article.author }}{% endcapture %}
+                <span class="article__meta-author">{{ 'blogs.article.author_html' | t:author:author  }}</span>
+            {%- endif -%}
+            {%- if section.settings.blog_date -%}
+                <span class="article__meta-date"><time datetime="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}" class="date">{{ article.published_at | date: format: 'date' }}</time></span>
+            {%- endif -%}
+            {%- if article.comments_enabled? and section.settings.blog_comment -%}
+                {%- assign number_of_comments = article.comments_count -%}
+                <span class="article__meta-comment">
+                    {%- if number_of_comments > 1 -%}
+                        {{'blogs.article.comments.other' | t:count:number_of_comments }}
+                    {%- else -%}
+                        {{'blogs.article.comments.one' | t:count:number_of_comments }}
+                    {%- endif -%}
+                </span>
+            {%- endif -%}
+        </div>
+        {%- if section.settings.blog_excerp -%}
+            <div class="rte article__excerpt mb-3 mb-md-4">
+                {{ article_content | strip_html | truncatewords: 35 }}
+            </div>
+        {%- endif -%}
+        <div class="d-flex justify-content-between align-items-center">
+            {%- if section.settings.blog_share -%}
+                {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+            {% endif %}
+            {%- if section.settings.blog_readmore -%}
+                <a class="article__read-more btn" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }}</a>
+            {%- endif -%}
+        </div>
+    </div>
+</article>

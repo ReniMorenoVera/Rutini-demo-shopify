@@ -1,0 +1,107 @@
+{%- if section.settings.color_bg != 'rgba(0,0,0,0)' -%}
+    {% capture bgColor %}
+        background-color: {{ section.settings.color_bg }};
+    {% endcapture %}
+{%- endif -%}
+{%- if section.settings.padding_block != blank -%}
+    {% capture paddingblock %}
+        padding: {{section.settings.padding_block}};
+    {% endcapture %}
+{%- endif -%}
+{%- if section.settings.margin_block != blank -%}
+    {% capture marginblock %}
+        margin: {{section.settings.margin_block}};
+    {% endcapture %}
+{%- endif -%}
+<section class="page-faqs" style="{{ bgColor}} {{ paddingblock }} {{ marginblock }}">
+	<div class="page-faqs__inner">
+		<div class="container">
+			<header class="page-header page-faqs__heading text-center">
+                <div class="icons">
+                    {%- include 'icons', icon: 'question'-%}
+                </div>
+				<h1 class="main-page-title page-title h0">{{ page.title }}</h1>
+			</header>
+			{%- if page.content != blank -%}
+				<div class="page-faqs__content mb-5">
+					<div class="rte">
+						{{ page.content }}
+					</div>
+				</div>
+			{%- endif -%}
+		</div>
+		<div class="page-faqs__content">
+            <div class="faqs">
+                <div class="container{% if section.settings.full_with %}-full{% endif %}">
+                    <div class="faqs__inner">
+                        <div class="row">
+                            {% for block in section.blocks %}
+                                <div class="col-12 col-lg-6 faqs__content mb-5">
+                                    <h3 class="faqs__title  mb-3 mb-md-4">
+                                        {{ block.settings.title }}
+                                    </h3>
+                                    <div class="faq__desc rte">
+                                        {{ block.settings.content }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+{% schema %}
+  	{
+        "name": "Faq Page",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Design Section"
+            },
+            {
+                "type": "checkbox",
+                "id": "full_with",
+                "label": "Enabel Full Width?"
+            },
+            {
+                "type": "color",
+                "id": "color_bg",
+                "label": "Background Color",
+                "default": "rgba(0,0,0,0)"
+            },
+            {
+                "type": "text",
+                "id": "padding_block",
+                "label": "Padding",
+                "placeholder": "0px 0px"
+            },
+            {
+                "type": "text",
+                "id": "margin_block",
+                "label": "Margin",
+                "placeholder": "0px 0px",
+                "info": "Not display on the Moible"
+            }
+		],
+        "blocks": [
+            {
+                "type": "faq",
+                "name": "Faq Item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "content",
+                        "label": "Item content"
+                    }
+                ]
+            }
+        ]
+  	}
+{% endschema %}

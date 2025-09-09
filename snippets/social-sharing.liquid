@@ -1,0 +1,49 @@
+<div class="social-sharing d-flex align-items-center">
+  	<label class="social-sharing_title">{% if share_label %}{{ share_label }}:{% else %}{{ 'general.social.share_title' | t }}{% endif %}</label>
+  	<ul class="list-social d-flex list-unstyled m-0">
+		{%- if settings.share_facebook -%}
+			<li class="list-social__item ms-3">
+				<a
+					class="list-social__link link link--text"
+					href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}"
+					target="_blank"
+					rel="noreferrer"
+				>
+					{% render 'icons', icon: 'facebook', class: 'icon icon-facebook', attr: 'width="15px" height="15px"' %}
+
+					<span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+					<span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+				</a>
+			</li>
+		{%- endif -%}
+
+		{%- if settings.share_twitter -%}
+			<li class="list-social__item ms-3">
+				<a
+					class="list-social__link link link--text"
+					href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}"
+					target="_blank"
+					rel="noreferrer"
+				>
+					{% render 'icons', icon: 'twitter', class: 'icon icon-twitter' , attr: 'width="15px"' %}
+					<span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+					<span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+				</a>
+			</li>
+		{%- endif -%}
+      	{%- if settings.share_pinterest -%}
+			<li class="list-social__item ms-3">
+				<a
+					class="list-social__link link link--text"
+					href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | url_param_escape }}"
+					target="_blank"
+					rel="noreferrer"
+				>
+					{% render 'icons', icon: 'pinterest', class: 'icon icon-pinterest', attr: 'width="15px"' %}
+					<span class="visually-hidden visually-hidden--inline">{{ 'general.social.alt_text.share_on_pinterest' | t }}</span>
+					<span class="visually-hidden visually-hidden--inline">{{ 'accessibility.link_messages.new_window' | t }}</span>
+				</a>
+			</li>
+      	{%- endif -%}
+    </ul>
+</div>

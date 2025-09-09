@@ -1,0 +1,120 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "banner-top": {
+      "type": "collection-banner-top",
+      "blocks": {
+        "8a500783-73f7-4679-93ef-5dee01f9e984": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "collection": "decor-art"
+          }
+        }
+      },
+      "block_order": [
+        "8a500783-73f7-4679-93ef-5dee01f9e984"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "15px 0 0",
+        "margin_block": "15px 0 0",
+        "image": "shopify://shop_images/Proyecto_nuevo.png"
+      }
+    },
+    "breadcrumb": {
+      "type": "breadcrumb-collections",
+      "settings": {
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "bgimage": false,
+        "enable_title": "none",
+        "breadcrumb_bg": "#ffffff",
+        "breadcrumb_color_heading": "#ffffff",
+        "breadcrumb_color": "#79b6c8",
+        "breadcrumb_color_link": "#201f1f",
+        "breadcrumb-height": "60px",
+        "breadcrumb-mheight": "60px",
+        "text-align": "start"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "bab3e1d7-85ae-4248-a305-180408ec2190": {
+          "type": "categories",
+          "disabled": true,
+          "settings": {
+            "categories_title": "Category",
+            "categories_handle": ""
+          }
+        },
+        "11e379ad-52c7-4ce0-be64-822d4713d593": {
+          "type": "filter",
+          "settings": {
+            "filter_title": "",
+            "enable_sorting": false
+          }
+        },
+        "76253806-007f-400c-b968-dae5c1195e97": {
+          "type": "productlist",
+          "disabled": true,
+          "settings": {
+            "product_title": "Best seller",
+            "collection_handle": "furniture",
+            "limit": 4
+          }
+        },
+        "83c84c5b-e545-4a8d-85ed-b331a3d4b09d": {
+          "type": "banner",
+          "settings": {
+            "banner_url": ""
+          }
+        },
+        "e7f0bbe0-143b-45d0-9091-3c6d8e540b1b": {
+          "type": "html",
+          "disabled": true,
+          "settings": {
+            "html_title": "Custom Html",
+            "html_content": "<p>Use HTML to format your text so it can be easily read.</p><p>This text can be used to share information about your brand with customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "bab3e1d7-85ae-4248-a305-180408ec2190",
+        "11e379ad-52c7-4ce0-be64-822d4713d593",
+        "76253806-007f-400c-b968-dae5c1195e97",
+        "83c84c5b-e545-4a8d-85ed-b331a3d4b09d",
+        "e7f0bbe0-143b-45d0-9091-3c6d8e540b1b"
+      ],
+      "settings": {
+        "sidebar_template": "sidebarleft",
+        "products_per_page": 20,
+        "products_ditem_per_row": 4,
+        "products_titem_per_row": 3,
+        "products_mitem_per_row": 2
+      }
+    }
+  },
+  "order": [
+    "banner-top",
+    "breadcrumb",
+    "banner",
+    "product-grid"
+  ]
+}

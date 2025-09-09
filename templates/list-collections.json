@@ -1,0 +1,46 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb-page",
+      "settings": {
+        "padding_block": "",
+        "margin_block": "0 0 60px",
+        "bgimage": false,
+        "breadcrumb_title": "Collections",
+        "enable_title": "none",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_color_heading": "#262626",
+        "breadcrumb_color": "#201f1f",
+        "breadcrumb_color_link": "#201f1f",
+        "breadcrumb-height": "60px",
+        "breadcrumb-mheight": "60px",
+        "text-align": "start"
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "",
+        "products_ditem_per_row": 4,
+        "products_titem_per_row": 3,
+        "products_mitem_per_row": 2,
+        "image_ratio": "square",
+        "crop": true,
+        "sort": "alphabetical_reversed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main"
+  ]
+}

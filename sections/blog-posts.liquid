@@ -1,0 +1,363 @@
+
+{%- assign blogName = section.settings.blog_handle -%}
+{%- assign blogLimit = section.settings.limit -%}
+{%- assign nav = section.settings.navigation -%}
+{%- assign pagination = section.settings.pagination -%}
+{%- assign infinite = section.settings.infinite -%}
+{%- assign autoplay = section.settings.autoplay -%}
+{%- assign autoplay_speed = section.settings.autoplay_speed | escape -%}
+{%- assign owlColumn1 = section.settings.column1 | plus:0 -%}
+{%- assign owlColumn2 = section.settings.column2 | plus:0 -%}
+{%- assign owlColumn3 = section.settings.column3 | plus:0 -%}
+{%- assign owlColumn4 = section.settings.column4 | plus:0 -%}
+{%- if section.settings.color_bg != 'rgba(0,0,0,0)' -%}
+    {%- capture bgColor -%}
+        background-color: {{ section.settings.color_bg }};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.padding_block != blank -%}
+    {%- capture paddingblock -%}
+        padding: {{section.settings.padding_block}};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.margin_block != blank -%}
+    {%- capture marginblock -%}
+        margin: {{section.settings.margin_block}};
+    {%- endcapture -%}
+{%- endif -%}
+{%- assign image_crop = nil -%}
+{%- if section.settings.crop -%}
+    {%- assign image_crop = 'center' -%}
+{%- endif -%} 
+<section class="vela-section vela-section-blogs overflow-hidden"  style="{{ bgColor}} {{ paddingblock }} {{ marginblock }}">
+    <div class="container{% if section.settings.full_with %}-fluid{% endif %}">
+        <div class="vela-section__inner">
+            {%- if section.settings.heading != blank -%}
+                <div class="heading-group">
+                    <h3 class="heading">
+                        <span>{{ section.settings.heading }}</span>
+                    </h3>
+                    {%- if section.settings.sub_heading != blank -%}
+                        <div class="sub-heading">
+                            {{ section.settings.sub_heading }}
+                        </div>
+                    {%- endif -%}
+                </div>
+            {%- endif -%}
+            <div class="vela-section__content">
+                <div class="js-carousel slick-carousel"
+                    data-nav="{{ nav }}"
+                    data-infinite="{{ infinite }}"
+                    data-dots="{{ pagination }}"
+                    data-autoplay="{{ autoplay }}"
+                    data-autoplayspeed="{{ autoplay_speed }}"
+                    data-columnone="{{ owlColumn1 }}" 
+                    data-columntwo="{{ owlColumn2 }}"
+                    data-columnthree="{{ owlColumn3 }}" 
+                    data-columnfour="{{ owlColumn4 }}">
+                            {% comment %} {%- if section.settings.blog_style == 'grid' -%}
+                            {%- else -%}
+                            {%- endif -%} {% endcomment %}
+                                <div class="slick-carousel__item">
+                                    <div class="custom-collection-card">
+                                        <img src="{{ 'blog.png' | asset_url }}" alt="Collection Image 1">
+                                      <div class="card-content">
+                                        <div class="blog-card-title">{{ 'sections.blog-posts.title' | t }}</div>
+                                        <div class="card-desc">{{ 'sections.blog-posts.desc' | t}}</div>
+                                        <a class="blog-card-link" href="URL_TO_COLLECTION_1">
+                                            {{ 'sections.blog-posts.link' | t}}
+                                            <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0.8 10 10" fill="none">
+                                                <path d="M9.70218 5.09631L5.88076 8.94952C5.75842 9.07188 5.56058 9.07188 5.43823 8.94952L4.92281 8.43402C4.80046 8.31166 4.80046 8.11379 4.92281 7.99142L8.00753 4.87502L4.92281 1.75861C4.80046 1.63624 4.80046 1.43838 4.92281 1.31601L5.43823 0.800514C5.56058 0.678149 5.75842 0.678149 5.88076 0.800514L9.70218 4.65372C9.82453 4.77608 9.82453 4.97395 9.70218 5.09631ZM5.53715 4.65372L1.71573 0.800514C1.59339 0.678149 1.39555 0.678149 1.2732 0.800514L0.757776 1.31601C0.635429 1.43838 0.635429 1.63624 0.757776 1.75861L3.8425 4.87502L0.757776 7.99142C0.635429 8.11379 0.635429 8.31166 0.757776 8.43402L1.2732 8.94952C1.39555 9.07188 1.59339 9.07188 1.71573 8.94952L5.53715 5.09631C5.6595 4.97395 5.6595 4.77608 5.53715 4.65372Z" fill="#4E4E4E"/>
+                                            </svg>
+                                        </a>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="slick-carousel__item">
+                                    <div class="custom-collection-card">
+                                        <img src="{{ 'blog.png' | asset_url }}" alt="Collection Image 2">
+                                      <div class="card-content">
+                                        <div class="blog-card-title">{{ 'sections.blog-posts.title' | t }}</div>
+                                        <div class="card-desc">{{ 'sections.blog-posts.desc' | t}}</div>
+                                        <a class="blog-card-link" href="URL_TO_COLLECTION_1">
+                                            {{ 'sections.blog-posts.link' | t}}
+                                            <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0.8 10 10" fill="none">
+                                                <path d="M9.70218 5.09631L5.88076 8.94952C5.75842 9.07188 5.56058 9.07188 5.43823 8.94952L4.92281 8.43402C4.80046 8.31166 4.80046 8.11379 4.92281 7.99142L8.00753 4.87502L4.92281 1.75861C4.80046 1.63624 4.80046 1.43838 4.92281 1.31601L5.43823 0.800514C5.56058 0.678149 5.75842 0.678149 5.88076 0.800514L9.70218 4.65372C9.82453 4.77608 9.82453 4.97395 9.70218 5.09631ZM5.53715 4.65372L1.71573 0.800514C1.59339 0.678149 1.39555 0.678149 1.2732 0.800514L0.757776 1.31601C0.635429 1.43838 0.635429 1.63624 0.757776 1.75861L3.8425 4.87502L0.757776 7.99142C0.635429 8.11379 0.635429 8.31166 0.757776 8.43402L1.2732 8.94952C1.39555 9.07188 1.59339 9.07188 1.71573 8.94952L5.53715 5.09631C5.6595 4.97395 5.6595 4.77608 5.53715 4.65372Z" fill="#4E4E4E"/>
+                                            </svg>
+                                        </a>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="slick-carousel__item">
+                                    <div class="custom-collection-card">
+                                        <img src="{{ 'blog.png' | asset_url }}" alt="Collection Image 3">
+                                      <div class="card-content">
+                                        <div class="blog-card-title">{{ 'sections.blog-posts.title' | t }}</div>
+                                        <div class="card-desc">{{ 'sections.blog-posts.desc' | t}}</div>
+                                        <a class="blog-card-link" href="URL_TO_COLLECTION_1">
+                                            {{ 'sections.blog-posts.link' | t}}
+                                            <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0.8 10 10">
+                                                <path d="M9.70218 5.09631L5.88076 8.94952C5.75842 9.07188 5.56058 9.07188 5.43823 8.94952L4.92281 8.43402C4.80046 8.31166 4.80046 8.11379 4.92281 7.99142L8.00753 4.87502L4.92281 1.75861C4.80046 1.63624 4.80046 1.43838 4.92281 1.31601L5.43823 0.800514C5.56058 0.678149 5.75842 0.678149 5.88076 0.800514L9.70218 4.65372C9.82453 4.77608 9.82453 4.97395 9.70218 5.09631ZM5.53715 4.65372L1.71573 0.800514C1.59339 0.678149 1.39555 0.678149 1.2732 0.800514L0.757776 1.31601C0.635429 1.43838 0.635429 1.63624 0.757776 1.75861L3.8425 4.87502L0.757776 7.99142C0.635429 8.11379 0.635429 8.31166 0.757776 8.43402L1.2732 8.94952C1.39555 9.07188 1.59339 9.07188 1.71573 8.94952L5.53715 5.09631C5.6595 4.97395 5.6595 4.77608 5.53715 4.65372Z" fill="#4E4E4E"/>
+                                            </svg>
+                                        </a>
+                                      </div>
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{%- assign prostyle = nil -%}
+{% schema %}
+    {
+        "name": "Blog posts",
+        "class": "velaFramework",
+        "settings":[
+            {
+                "type": "header",
+                "content": "Design Section"
+            },
+            {
+                "type": "checkbox",
+                "id": "full_with",
+                "label": "Enabel Full Width?"
+            },
+            {
+                "type": "color",
+                "id": "color_bg",
+                "label": "Background Color",
+                "default": "rgba(0,0,0,0)"
+            },
+            {
+                "type": "text",
+                "id": "padding_block",
+                "label": "Padding",
+                "placeholder": "0px 0px",
+                "info": "Ex: 0px 0px 0px 0px and use desktop only"
+            },
+            {
+                "type": "text",
+                "id": "margin_block",
+                "label": "Margin",
+                "placeholder": "0px 0px",
+                "default": "0 0 30px",
+                "info": "Ex: 0px 0px 30px 0px"
+            },
+            {
+                "type": "header",
+                "content": "General Settings"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Lastest blogs"
+            },
+            {
+                "type": "text",
+                "id": "sub_heading",
+                "label": "Sub heading"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "desc",
+                "label": "Description"
+            },
+            {
+                "type": "text",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "blog",
+                "id": "blog_handle",
+                "label": "Blog"
+            },
+			{
+                "type": "range",
+                "id": "limit",
+                "min": 1,
+                "max": 12,
+                "step": 1,
+                "label": "Maximum item to show",
+                "default": 8
+            },
+            {
+                "type": "header",
+                "content": "BLog card"
+            },
+            {
+                "type": "checkbox",
+                "id": "blog_tags",
+                "label": "Show Tags",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "blog_date",
+                "label": "Show date",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "blog_author",
+                "label": "Show author",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "blog_comment",
+                "label": "Show comment",
+                "default": true,
+                "info": "[See about it](https:\/\/help.shopify.com\/en\/manual\/online-store\/blogs\/managing-comments)"
+            },
+            {
+                "type": "checkbox",
+                "id": "blog_excerp",
+                "label": "Show Excerp",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "blog_readmore",
+                "label": "Show readmore",
+                "default": true
+            },
+            {
+                "type": "select",
+                "id": "image_ratio",
+                "options": [
+                  {
+                    "value": "adapt",
+                    "label": "Adapt to image"
+                  },
+                  {
+                    "value": "portrait",
+                    "label": "Portrait"
+                  },
+                  {
+                    "value": "square",
+                    "label": "Square"
+                  }
+                ],
+                "default": "adapt",
+                "label": "Image ratio"
+            },
+            {
+                "type": "checkbox",
+                "id": "crop",
+                "label": "Crop Image",
+                "default": false,
+                "info": "Not use with Adapt to image"
+            },
+            {
+                "type": "select",
+                "id": "blog_style",
+                "options": [
+                  {
+                    "value": "grid",
+                    "label": "Grid"
+                  },
+                  {
+                    "value": "list",
+                    "label": "List"
+                  }
+                ],
+                "default": "grid",
+                "label": "Blog Style"
+            },
+            {
+                "type": "header",
+                "content": "Carousel Settings"
+            },
+            {
+                "type": "checkbox",
+                "id": "navigation",
+                "label": "Show navigation",
+                "default": true
+            },
+            {
+				"type": "checkbox",
+				"id": "pagination",
+				"label": "Show dot indicators",
+				"default": true
+			},
+            {
+                "type": "checkbox",
+                "id": "infinite",
+                "label": "Infinite loop sliding",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "autoplay",
+                "label": "Enable autoplay",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "autoplay_speed",
+                "label": "Autoplay speed",
+                "info": "Autoplay speed in milliseconds. Type: int(ms)",
+                "default": "10000"
+            },
+            {
+                "type": "range",
+                "id": "column1",
+                "min": 1,
+                "max": 6,
+                "step": 1,
+                "label": "#Column 1",
+                "default": 4,
+                "info": "Large desktops"
+            },
+            {
+                "type": "range",
+                "id": "column2",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "label": "#Column 2",
+                "default": 3,
+                "info": "Desktops & Tablets landscape"
+            },
+            {
+                "type": "range",
+                "id": "column3",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "label": "#Column 3",
+                "default": 2,
+                "info": "Mobile phone landscape"
+            },
+            {
+                "type": "range",
+                "id": "column4",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "label": "#Column 4",
+                "default": 2,
+                "info": "Mobile phone"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Blog posts",
+                "category": "4. element"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,285 @@
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb-page",
+      "settings": {
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "bgimage": false,
+        "breadcrumb_title": "Our story",
+        "enable_title": "none",
+        "breadcrumb_bg": "#ffffff",
+        "breadcrumb_color_heading": "#201f1f",
+        "breadcrumb_color": "#79b6c8",
+        "breadcrumb_color_link": "#201f1f",
+        "breadcrumb-height": "60px",
+        "breadcrumb-mheight": "60px",
+        "text-align": "start"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": { "full_with": false, "color_bg": "rgba(0,0,0,0)", "padding_block": "", "margin_block": "0 0 30px" }
+    },
+    "16266097795e2c2841": {
+      "type": "image-with-text",
+      "blocks": {
+        "54fe1361-e274-4064-8012-4d009c700f20": {
+          "type": "text",
+          "settings": {
+            "text": "Our story",
+            "text_style": "h3",
+            "text_color_desktop": "#000000",
+            "text_font_size_desktop": 40,
+            "margin_desktop": "0 0 25px",
+            "text_color_tablet": "#000000",
+            "text_font_size_tablet": 34,
+            "margin_tablet": "",
+            "text_color_mobile": "#000000",
+            "text_font_size_mobile": 28,
+            "margin_mobile": ""
+          }
+        },
+        "d625e548-696b-40ce-8646-3de57ab47b77": {
+          "type": "text",
+          "settings": {
+            "text": "Lorem Khaled Ipsum is a major key to success. They don’t want us to win. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. Major key, don’t fall for the trap, stay focused. It’s the ones closest to you that want to see you fail. Major key, don’t fall for the trap, stay focused. It’s the ones closest to you that want to see you fail. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.",
+            "text_style": "text",
+            "text_color_desktop": "#868686",
+            "text_font_size_desktop": 16,
+            "margin_desktop": "0 0 30px",
+            "text_color_tablet": "#000000",
+            "text_font_size_tablet": 16,
+            "margin_tablet": "0 0 20px",
+            "text_color_mobile": "#000000",
+            "text_font_size_mobile": 16,
+            "margin_mobile": "0 0 10px"
+          }
+        },
+        "988dfc3f-6e04-46c7-8f4b-fdb14917d3b2": {
+          "type": "image",
+          "settings": { "image": "shopify://shop_images/about_signature.png", "width": 50, "margin": "" }
+        }
+      },
+      "block_order": [
+        "54fe1361-e274-4064-8012-4d009c700f20",
+        "d625e548-696b-40ce-8646-3de57ab47b77",
+        "988dfc3f-6e04-46c7-8f4b-fdb14917d3b2"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "bg_align": "center",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 30px",
+        "space_between": "4",
+        "banner_size": 6,
+        "banner_size_ipad": 6,
+        "banner_size_mobile": 12,
+        "banner_position": "left",
+        "text_align": "left",
+        "banner_mobile": "false",
+        "banner": "shopify://shop_images/about-4.jpg",
+        "banner_url": "",
+        "padding_content": "",
+        "content_color_bg": "rgba(0,0,0,0)"
+      }
+    },
+    "1639155333f5167054": {
+      "type": "multi-image-with-text",
+      "blocks": {
+        "163915533239a780cf-0": {
+          "type": "feature_item",
+          "settings": {
+            "width": "col-12 col-md-4",
+            "banner": "shopify://shop_images/about-3.jpg",
+            "button_url": "",
+            "subtitle": "",
+            "heading_subcolor": "#000",
+            "heading_sub_size": 12,
+            "title": "OUR VISION",
+            "heading_color": "#000",
+            "heading_size": 20,
+            "content": "Many desktop publishing packages and web page editors now use Lorem Ipsum.",
+            "text_color": "#606060",
+            "text_size": 14,
+            "button": "",
+            "button_color": "#000",
+            "button_border_color": "#000",
+            "button_color_bg": "#fff",
+            "text_align": "left",
+            "banner_position": "botton"
+          }
+        },
+        "163915533239a780cf-1": {
+          "type": "feature_item",
+          "settings": {
+            "width": "col-12 col-md-4",
+            "banner": "shopify://shop_images/about-2.jpg",
+            "button_url": "",
+            "subtitle": "",
+            "heading_subcolor": "#000",
+            "heading_sub_size": 12,
+            "title": "WHAT WE REALLY DO?",
+            "heading_color": "#201f1f",
+            "heading_size": 20,
+            "content": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.",
+            "text_color": "#606060",
+            "text_size": 14,
+            "button": "",
+            "button_color": "#000",
+            "button_border_color": "#000",
+            "button_color_bg": "#fff",
+            "text_align": "left",
+            "banner_position": "botton"
+          }
+        },
+        "163915533239a780cf-2": {
+          "type": "feature_item",
+          "settings": {
+            "width": "col-12 col-md-4",
+            "banner": "shopify://shop_images/about-1.jpg",
+            "button_url": "",
+            "subtitle": "",
+            "heading_subcolor": "#000",
+            "heading_sub_size": 12,
+            "title": "HISTORY OF BEGINNING",
+            "heading_color": "#201f1f",
+            "heading_size": 20,
+            "content": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.",
+            "text_color": "#606060",
+            "text_size": 14,
+            "button": "",
+            "button_color": "#000",
+            "button_border_color": "#000",
+            "button_color_bg": "#fff",
+            "text_align": "left",
+            "banner_position": "botton"
+          }
+        }
+      },
+      "block_order": ["163915533239a780cf-0", "163915533239a780cf-1", "163915533239a780cf-2"],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 30px",
+        "heading": "",
+        "sub_heading": "",
+        "space_between": "4"
+      }
+    },
+    "16391518153248b26a": {
+      "type": "five-image",
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 40px",
+        "image1": "shopify://shop_images/about-gallery-1.jpg",
+        "image1_url": "shopify://collections/chairs",
+        "image2": "shopify://shop_images/about-gallery-2.jpg",
+        "image2_url": "shopify://collections/decor-art",
+        "image3": "shopify://shop_images/about-gallery-3.jpg",
+        "image3_url": "shopify://collections/furniture",
+        "image4": "shopify://shop_images/about-gallery-4.jpg",
+        "image4_url": "shopify://collections/lighting-lamp",
+        "image5": "shopify://shop_images/about-gallery-5.jpg",
+        "image5_url": "shopify://collections/sofas"
+      }
+    },
+    "16268371625be60272": {
+      "type": "our-teams",
+      "blocks": {
+        "4103868f-6c96-4e3d-b07c-41af5d11d664": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/team-3.jpg",
+            "title": "JOHN DOE",
+            "position": "CEO",
+            "desc": "Sed ut perspiciatis unde omnis iste natus error sitaccusantium doloremque laudan totam rem aperiam",
+            "fa_link": "#",
+            "tw_link": "#",
+            "in_link": "#",
+            "instagram_link": "#"
+          }
+        },
+        "5fe37f94-f63a-4f12-b08f-ddde98e4da5c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/team-4.jpg",
+            "title": "JOSH CLARK",
+            "position": "Co-Founder",
+            "desc": "Sed ut perspiciatis unde omnis iste natus error sitaccusantium doloremque laudan totam rem aperiam",
+            "fa_link": "#",
+            "tw_link": "#",
+            "in_link": "#",
+            "instagram_link": "#"
+          }
+        },
+        "64f1f096-1821-4506-95c7-325698e40623": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/team-1.jpg",
+            "title": "HANNAH GIBSON",
+            "position": "developer",
+            "desc": "Sed ut perspiciatis unde omnis iste natus error sitaccusantium doloremque laudan totam rem aperiam",
+            "fa_link": "#",
+            "tw_link": "#",
+            "in_link": "#",
+            "instagram_link": "#"
+          }
+        },
+        "87a36e94-8c68-4aa5-80a8-82500949bed0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/team-2.jpg",
+            "title": "ROBIN JORDAN",
+            "position": "Designer",
+            "desc": "Sed ut perspiciatis unde omnis iste natus error sitaccusantium doloremque laudan totam rem aperiam",
+            "fa_link": "#",
+            "tw_link": "#",
+            "in_link": "#",
+            "instagram_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "4103868f-6c96-4e3d-b07c-41af5d11d664",
+        "5fe37f94-f63a-4f12-b08f-ddde98e4da5c",
+        "64f1f096-1821-4506-95c7-325698e40623",
+        "87a36e94-8c68-4aa5-80a8-82500949bed0"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "heading": "MEET OURT TEAM",
+        "sub_heading": "At vero eos et accusamus et iusto odio dignissimos ducimus.",
+        "image_ratio": "adapt",
+        "crop": false,
+        "layout_style": "grid",
+        "text_align": "center",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 4,
+        "column2": 2,
+        "column3": 1,
+        "column4": 1
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "16266097795e2c2841",
+    "1639155333f5167054",
+    "16391518153248b26a",
+    "16268371625be60272"
+  ]
+}

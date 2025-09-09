@@ -1,0 +1,1070 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "163948024846cb1ead": {
+      "type": "slideshow-banner",
+      "blocks": {
+        "image_dR9TUN": {
+          "type": "image",
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Web_-_Noviembre-01.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-04.jpg",
+            "link": "",
+            "alignment": "text-left align-top",
+            "text-alignment": "center",
+            "slides_effect": "leftright",
+            "subheading": "",
+            "subheading_color": "#000000",
+            "subheading_font_family": "text",
+            "subheading_font_size": 18,
+            "title": "",
+            "title_color": "#000000",
+            "title_font_family": "ff-special",
+            "title_font_size": 60,
+            "title2": "",
+            "title2_color": "#000000",
+            "title2_font_family": "text",
+            "title2_font_size": 110,
+            "desc": "",
+            "desc_color": "#000000",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 14,
+            "btn_link": "",
+            "btn_padding": "10px 30px",
+            "btn_text_color": "#ffffff",
+            "btn_border_color": "#000000",
+            "btn_bg_color": "#000000"
+          }
+        },
+        "image_U8MJwQ": {
+          "type": "image",
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Web_-_Noviembre-02_49a921c3-676c-4505-88fa-7f7a1fb92cf9.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-03.jpg",
+            "link": "",
+            "alignment": "text-left align-top",
+            "text-alignment": "center",
+            "slides_effect": "leftright",
+            "subheading": "",
+            "subheading_color": "#000000",
+            "subheading_font_family": "text",
+            "subheading_font_size": 18,
+            "title": "",
+            "title_color": "#000000",
+            "title_font_family": "ff-special",
+            "title_font_size": 60,
+            "title2": "",
+            "title2_color": "#000000",
+            "title2_font_family": "text",
+            "title2_font_size": 110,
+            "desc": "",
+            "desc_color": "#000000",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 14,
+            "btn_link": "",
+            "btn_padding": "10px 30px",
+            "btn_text_color": "#ffffff",
+            "btn_border_color": "#000000",
+            "btn_bg_color": "#000000"
+          }
+        },
+        "1639480248ccb5deca-1": {
+          "type": "image",
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-02.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Banner_-_Idraet.jpg",
+            "link": "",
+            "alignment": "text-left align-middle",
+            "text-alignment": "left",
+            "slides_effect": "default",
+            "subheading": "<span class=\"fw-bold\"></span>",
+            "subheading_color": "#1f1f1f",
+            "subheading_font_family": "ff-special",
+            "subheading_font_size": 18,
+            "title": "",
+            "title_color": "#ffffff",
+            "title_font_family": "text",
+            "title_font_size": 60,
+            "title2": "",
+            "title2_color": "#b09d87",
+            "title2_font_family": "text",
+            "title2_font_size": 60,
+            "desc": "<i></i>",
+            "desc_color": "#121212",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "Ver Perfumes",
+            "btn_font_size": 13,
+            "btn_link": "shopify://collections/decor-art",
+            "btn_padding": "14px 28px",
+            "btn_text_color": "#353535",
+            "btn_border_color": "#353535",
+            "btn_bg_color": "#fef4f4"
+          }
+        },
+        "image_n9BW9g": {
+          "type": "image",
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-04.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Destacados_92065c98-b8fe-40d3-a988-879d2045e3fb.jpg",
+            "link": "",
+            "alignment": "text-left align-top",
+            "text-alignment": "center",
+            "slides_effect": "leftright",
+            "subheading": "",
+            "subheading_color": "#000000",
+            "subheading_font_family": "text",
+            "subheading_font_size": 18,
+            "title": "",
+            "title_color": "#000000",
+            "title_font_family": "ff-special",
+            "title_font_size": 60,
+            "title2": "",
+            "title2_color": "#000000",
+            "title2_font_family": "text",
+            "title2_font_size": 110,
+            "desc": "",
+            "desc_color": "#000000",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 14,
+            "btn_link": "",
+            "btn_padding": "10px 30px",
+            "btn_text_color": "#ffffff",
+            "btn_border_color": "#000000",
+            "btn_bg_color": "#000000"
+          }
+        },
+        "image_VQrkky": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-01.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Perfumes_52666ab7-b12f-4354-9c40-d31d20da7a26.jpg",
+            "link": "",
+            "alignment": "text-left align-top",
+            "text-alignment": "center",
+            "slides_effect": "leftright",
+            "subheading": "",
+            "subheading_color": "#000000",
+            "subheading_font_family": "text",
+            "subheading_font_size": 18,
+            "title": "Slideshow",
+            "title_color": "#000000",
+            "title_font_family": "ff-special",
+            "title_font_size": 60,
+            "title2": "Slideshow",
+            "title2_color": "#000000",
+            "title2_font_family": "text",
+            "title2_font_size": 110,
+            "desc": "",
+            "desc_color": "#000000",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 14,
+            "btn_link": "",
+            "btn_padding": "10px 30px",
+            "btn_text_color": "#ffffff",
+            "btn_border_color": "#000000",
+            "btn_bg_color": "#000000"
+          }
+        },
+        "1639480248ccb5deca-0": {
+          "type": "image",
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-05.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Expertas_3375cea8-e2a0-4a8d-bff9-97addfa6e547.jpg",
+            "link": "",
+            "alignment": "text-left align-middle",
+            "text-alignment": "left",
+            "slides_effect": "default",
+            "subheading": "<span class=\"fw-bold\"></span>",
+            "subheading_color": "#1f1f1f",
+            "subheading_font_family": "ff-special",
+            "subheading_font_size": 18,
+            "title": "",
+            "title_color": "#1f1f1f",
+            "title_font_family": "text",
+            "title_font_size": 80,
+            "title2": "",
+            "title2_color": "#b09d87",
+            "title2_font_family": "text",
+            "title2_font_size": 60,
+            "desc": "<i></i>",
+            "desc_color": "#323232",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 12,
+            "btn_link": "shopify://collections/furniture",
+            "btn_padding": "18px 28px",
+            "btn_text_color": "#353535",
+            "btn_border_color": "#353535",
+            "btn_bg_color": "rgba(0,0,0,0)"
+          }
+        },
+        "image_3bwUWe": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-03.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Benetton_3d6d021f-c4af-48ab-b851-d9b3772677d1.jpg",
+            "link": "",
+            "alignment": "text-left align-top",
+            "text-alignment": "center",
+            "slides_effect": "leftright",
+            "subheading": "",
+            "subheading_color": "#000000",
+            "subheading_font_family": "text",
+            "subheading_font_size": 18,
+            "title": "Slideshow",
+            "title_color": "#000000",
+            "title_font_family": "ff-special",
+            "title_font_size": 60,
+            "title2": "Slideshow",
+            "title2_color": "#000000",
+            "title2_font_family": "text",
+            "title2_font_size": 110,
+            "desc": "",
+            "desc_color": "#000000",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 14,
+            "btn_link": "",
+            "btn_padding": "10px 30px",
+            "btn_text_color": "#ffffff",
+            "btn_border_color": "#000000",
+            "btn_bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_dR9TUN",
+        "image_U8MJwQ",
+        "1639480248ccb5deca-1",
+        "image_n9BW9g",
+        "image_VQrkky",
+        "1639480248ccb5deca-0",
+        "image_3bwUWe"
+      ],
+      "settings": {
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 14px",
+        "navigation": true,
+        "pagination": true,
+        "fade": false,
+        "autoplay": true,
+        "autoplay_speed": "8000",
+        "image1": "shopify://shop_images/Must_-_Banner_-_Perfumeria.jpg",
+        "url1": "shopify://collections/decor-art",
+        "image2": "shopify://shop_images/Must_-_Banners_-_Love_yourself.jpg",
+        "url2": "shopify://collections/furniture",
+        "banner_mobile": "always"
+      }
+    },
+    "1630410045bedb52b5": {
+      "type": "services",
+      "blocks": {
+        "a3cc3efd-9e0c-4dd6-8127-bece5c56a534": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/370x228.png",
+            "box_title": "Envío gratis",
+            "color_title": "#5b5b5b",
+            "title_font_size": 14,
+            "box_desc": "<i>Envío gratis a todo el país</i>",
+            "color_desc": "#606060",
+            "desc_font_size": 14
+          }
+        },
+        "23c6cd9f-3a7f-4c3c-923b-40f0a80ed7fd": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/370x228.png",
+            "box_title": "Atención telefónica",
+            "color_title": "#5b5b5b",
+            "title_font_size": 14,
+            "box_desc": "<i>Envío gratis a todo el país</i>",
+            "color_desc": "#666666",
+            "desc_font_size": 14
+          }
+        },
+        "a9c66a77-11e9-4fea-8d38-3b9af03999f9": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/370x228.png",
+            "box_title": "Pagá con tarjeta",
+            "color_title": "#5b5b5b",
+            "title_font_size": 14,
+            "box_desc": "<i>Envío gratis a todo el país</i>",
+            "color_desc": "#606060",
+            "desc_font_size": 14
+          }
+        }
+      },
+      "block_order": [
+        "a3cc3efd-9e0c-4dd6-8127-bece5c56a534",
+        "23c6cd9f-3a7f-4c3c-923b-40f0a80ed7fd",
+        "a9c66a77-11e9-4fea-8d38-3b9af03999f9"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 60px",
+        "heading": "",
+        "sub_heading": "",
+        "iconsize": "50x50",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": false,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 3,
+        "column3": 1,
+        "column4": 1
+      }
+    },
+    "1639385876881b85aa": {
+      "type": "product-tab",
+      "blocks": {
+        "1639385876e8a78240-0": {
+          "type": "tab",
+          "settings": {
+            "title": "Perfumes",
+            "collection": "fragancias"
+          }
+        },
+        "1639385876e8a78240-1": {
+          "type": "tab",
+          "settings": {
+            "title": "Maquillaje",
+            "collection": "maquillaje"
+          }
+        }
+      },
+      "block_order": [
+        "1639385876e8a78240-0",
+        "1639385876e8a78240-1"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "20px",
+        "margin_block": "0 0 90px",
+        "limit": 12,
+        "product_style": "grid",
+        "button_text": "Ver más",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "5000",
+        "column1": 5,
+        "column2": 4,
+        "column3": 3,
+        "column4": 2
+      }
+    },
+    "1638200046fbf44826": {
+      "type": "image-list",
+      "blocks": {
+        "1638200046956339fd-0": {
+          "type": "image",
+          "settings": {
+            "width": "col-12",
+            "image": "shopify://shop_images/Must_-_Web_-_Noviembre-05_4271e72c-c15e-4670-9c04-df07837a0941.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-03_3.jpg",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "1638200046956339fd-0"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "30px 0",
+        "margin_block": "0 0 60px",
+        "image_ratio": "adapt",
+        "crop": true,
+        "effect": "effectNone",
+        "space_between": "4",
+        "custom_css": ""
+      }
+    },
+    "16303012351fd53818": {
+      "type": "product-list",
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 60px",
+        "heading": "Los más vendidos",
+        "sub_heading": "",
+        "collection_handle": "los-mas-vendidos",
+        "limit": 12,
+        "product_style": "grid",
+        "button_text": "Ver más",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "5000",
+        "column1": 5,
+        "column2": 4,
+        "column3": 3,
+        "column4": 2
+      }
+    },
+    "1638200046fbf44825": {
+      "type": "image-list",
+      "blocks": {
+        "1638200046956339fd-0": {
+          "type": "image",
+          "settings": {
+            "width": "col-12",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-15_00dda57d-a63e-475f-9928-ba008fc0239e.jpg",
+            "image_mobile": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-17.jpg",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "1638200046956339fd-0"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "30px 0",
+        "margin_block": "0 0 60px",
+        "image_ratio": "adapt",
+        "crop": false,
+        "effect": "effectNone",
+        "space_between": "4",
+        "custom_css": ""
+      }
+    },
+    "16303012351fd53819": {
+      "type": "product-list",
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "30px 0",
+        "margin_block": "0 0 60px",
+        "heading": "Seleccionados para vos",
+        "sub_heading": "",
+        "collection_handle": "carrusel-home-seleccionados-para-vos",
+        "limit": 10,
+        "product_style": "grid",
+        "button_text": "Ver todos",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "5000",
+        "column1": 5,
+        "column2": 4,
+        "column3": 3,
+        "column4": 2
+      }
+    },
+    "gallery_image_7A7eR8": {
+      "type": "gallery-image",
+      "blocks": {
+        "item_gz6KFr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Must_-Banner-_Envios.jpg",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "item_6LLyk6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Must_-_Banner_-_Promociones_2.jpg",
+            "link": ""
+          }
+        },
+        "item_DW7XcW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Must_-_Banner_-_Medios_de_pago.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_gz6KFr",
+        "item_6LLyk6",
+        "item_DW7XcW"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "",
+        "heading": "",
+        "sub_heading": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": false,
+        "space_between": "4",
+        "navigation": true,
+        "infinite": true,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 3,
+        "column3": 2,
+        "column4": 1
+      }
+    },
+    "1638203272229f5ce0": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 60px",
+        "heading": "NUESTRO BLOG",
+        "sub_heading": "Claritas est etiam processus dynamicus, qui sequitured",
+        "title": "LA CLAVE PARA TENER MÁS ÉXITO",
+        "desc": "I pick my choice, squeaky clean. How's business? Boomin. Congratulations, you played",
+        "link": "Ver más",
+        "blog_handle": "news",
+        "limit": 3,
+        "blog_tags": false,
+        "blog_date": true,
+        "blog_author": false,
+        "blog_comment": false,
+        "blog_excerp": true,
+        "blog_readmore": true,
+        "image_ratio": "adapt",
+        "crop": false,
+        "blog_style": "grid",
+        "navigation": true,
+        "pagination": false,
+        "infinite": true,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 2,
+        "column3": 1,
+        "column4": 1
+      }
+    },
+    "1638203416ea4f5a6f": {
+      "type": "logo-list",
+      "blocks": {
+        "image_WTW8Yf": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/perfumes",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-38_42f44269-e5b3-4f9d-bce5-fe8eb4a05049.png",
+            "name": ""
+          }
+        },
+        "image_Th6Lhr": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/frontpage",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-35_8f100a76-51fe-4124-bd0f-45b25e7dbd27.png",
+            "name": ""
+          }
+        },
+        "163820341680956fea-1": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/featured-products",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-36_7154b18b-6552-4b32-80e5-d9864e700d50.png",
+            "name": ""
+          }
+        },
+        "163820341680956fea-2": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/furniture",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-34_673ec976-d594-49d3-815c-63ce8c8a58a8.png",
+            "name": ""
+          }
+        },
+        "163820341680956fea-3": {
+          "type": "image",
+          "settings": {
+            "link": "shopify://collections/lighting-lamp",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-33_65295fc0-5d27-4884-9788-884e02a23bbc.png",
+            "name": ""
+          }
+        },
+        "image_QefRMq": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-37_77da53b4-30e1-4599-b0bb-601ca93cd692.png",
+            "name": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_WTW8Yf",
+        "image_Th6Lhr",
+        "163820341680956fea-1",
+        "163820341680956fea-2",
+        "163820341680956fea-3",
+        "image_QefRMq"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 45px",
+        "heading": "",
+        "sub_heading": "",
+        "logo_size": "210x100",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "3000",
+        "column1": 6,
+        "column2": 4,
+        "column3": 3,
+        "column4": 2
+      }
+    },
+    "1638203345edf1554f": {
+      "type": "border",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "margin_block": "0 0 45px",
+        "border_style": "dashed",
+        "border_width": 1,
+        "border_color": "#ebebeb"
+      }
+    },
+    "1639452815e98a453e": {
+      "type": "html",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 60px",
+        "heading": "",
+        "sub_heading": "",
+        "content": "<div class=\"vela-box-sale py-3\">\n    <div class=\"content-sale text-center position-relative text-uppercase py-3\">\n        <span class=\"position-absolute top-0 end-0\" style=\"margin-right: -27px; margin-top: -13px;\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"33\" viewbox=\"0 0 29 32\" style=\"transform: rotate(90deg);\"><path d=\"M13.535 18.155l15.652 0.119-0.899-0.904c-0.067-0.067-6.674-6.531-15.515-0.334l-2.805-4.12c0.356-0.296 0.663-0.662 0.894-1.096 0.955-1.79 0.278-4.013-1.511-4.968-1.79-0.955-4.014-0.278-4.967 1.511-0.955 1.789-0.279 4.013 1.511 4.968 1.023 0.546 2.187 0.556 3.177 0.132l2.47 3.628-4.225-0.032c-0.139-1.15-0.816-2.216-1.916-2.803-1.79-0.954-4.013-0.278-4.967 1.512-0.955 1.789-0.279 4.013 1.511 4.967 1.789 0.954 4.014 0.278 4.968-1.511 0.193-0.36 0.315-0.737 0.379-1.117l4.904 0.037c-0.119 2.622 0.354 4.712 1.13 6.386h-1.786v1.049h3.147v-0.524h0.066c-0.023-0.038-0.043-0.080-0.066-0.119v-0.406h-0.223c-0.675-1.314-1.147-2.937-1.228-4.952l3.372 4.952h-0.872v1.049h3.147v-1.049h-1.007l-4.341-6.376zM25.412 16.6c0.381 0.204 0.715 0.41 0.999 0.605l-11.825-0.091c4.737-2.758 8.586-1.708 10.826-0.514zM6.388 12.406c-1.275-0.681-1.76-2.273-1.080-3.548s2.272-1.761 3.549-1.080c1.275 0.68 1.76 2.272 1.079 3.548-0.68 1.276-2.272 1.76-3.548 1.079zM5.987 18.731c-0.68 1.275-2.272 1.759-3.549 1.079s-1.76-2.272-1.080-3.548c0.681-1.276 2.272-1.761 3.549-1.080 1.275 0.68 1.76 2.272 1.080 3.549z\" fill=\"#c2c2c2\"></path><path d=\"M7.343 24.532h3.147v1.049h-3.147v-1.049z\" fill=\"#c2c2c2\"></path><path d=\"M19.931 24.532h3.147v1.049h-3.147v-1.049z\" fill=\"#c2c2c2\"></path><path d=\"M3.147 24.532h3.147v1.049h-3.147v-1.049z\" fill=\"#c2c2c2\"></path><path d=\"M24.127 24.532h3.147v1.049h-3.147v-1.049z\" fill=\"#c2c2c2\"></path></svg></span>\n        <span class=\"fw-bold ff-special\">Free uk delivery + return over £85.00 (excluding homeware)| free uk collect from store</span> \n        <span class=\"lable-sale position-absolute top-0 end-0 text-white fw-bolder\">Hurry up</span>\n    </div>\n</div>\n<style>.vela-box-sale {border: 1px dashed #c2c2c2; color: #333;}.vela-box-sale .lable-sale { font-size: 12px;margin-top: -5px;line-height: 30px;padding: 0 10px;background: var(--primary); transition: all 0.2s ease;}\n.vela-box-sale .lable-sale::before { content: \"\";position: absolute;top: 0;left: -20px;border: 15px solid var(--primary); border-left-color: transparent;}.vela-box-sale:hover .lable-sale { letter-spacing: 2px;}\n</style>"
+      }
+    },
+    "16304318673182aaa7": {
+      "type": "product-list",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 60px",
+        "heading": "FEATURED PRODUCTS",
+        "sub_heading": "<i>Claritas est etiam processus dynamicus, qui sequitur.</i>",
+        "collection_handle": "decor-art",
+        "limit": 8,
+        "product_style": "list",
+        "button_text": "",
+        "slide_enable": false,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 4,
+        "column2": 3,
+        "column3": 2,
+        "column4": 2
+      }
+    },
+    "16382024547f940706": {
+      "type": "product-lists",
+      "blocks": {
+        "1638202453c19df7aa-0": {
+          "type": "item",
+          "settings": {
+            "heading": "BEST SELLER",
+            "collection_handle": "frontpage",
+            "item_number": 3,
+            "limit": 6
+          }
+        },
+        "1638202453c19df7aa-1": {
+          "type": "item",
+          "settings": {
+            "heading": "ONSALE PRODUCTS",
+            "collection_handle": "frontpage",
+            "item_number": 3,
+            "limit": 6
+          }
+        },
+        "1638202453c19df7aa-2": {
+          "type": "item",
+          "settings": {
+            "heading": "MOSTVIEWED PRODUCTS",
+            "collection_handle": "furniture",
+            "item_number": 3,
+            "limit": 6
+          }
+        }
+      },
+      "block_order": [
+        "1638202453c19df7aa-0",
+        "1638202453c19df7aa-1",
+        "1638202453c19df7aa-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 50px"
+      }
+    },
+    "1638198859510e66be": {
+      "type": "image-list",
+      "blocks": {
+        "16381988598d6cf3af-0": {
+          "type": "image",
+          "settings": {
+            "width": "col-12 col-sm-4",
+            "link": "shopify://collections/sofas"
+          }
+        },
+        "2feba39b-096e-47d9-a25b-eafa954c2618": {
+          "type": "image",
+          "settings": {
+            "width": "col-12 col-sm-4",
+            "link": "shopify://collections/sofas"
+          }
+        },
+        "2c152df2-4dae-46c7-a3e8-97373c20250a": {
+          "type": "image",
+          "settings": {
+            "width": "col-12 col-sm-4",
+            "link": "shopify://collections/sofas"
+          }
+        }
+      },
+      "block_order": [
+        "16381988598d6cf3af-0",
+        "2feba39b-096e-47d9-a25b-eafa954c2618",
+        "2c152df2-4dae-46c7-a3e8-97373c20250a"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "30px 0",
+        "margin_block": "0 0 60px",
+        "image_ratio": "adapt",
+        "crop": false,
+        "effect": "effectFour",
+        "space_between": "4",
+        "custom_css": ""
+      }
+    },
+    "16394494642a300107": {
+      "type": "border",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "margin_block": "0 0 60px",
+        "border_style": "dashed",
+        "border_width": 1,
+        "border_color": "#ebebeb"
+      }
+    },
+    "163820402146c04464": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "30px 0",
+        "margin_block": "0 0 60px",
+        "title": "SIGN UP TO NEWSLETTER",
+        "description": "<i>Subscribe to the Eren mailing list to receive updates on new arrivals, special offers and other discount information.</i>",
+        "mailchimp": false,
+        "newsletter_form_action": ""
+      }
+    },
+    "1626661118733af799": {
+      "type": "testimonial",
+      "blocks": {
+        "4dd3ccfa-b339-44f2-bd0b-a5aa8459c9da": {
+          "type": "item",
+          "settings": {
+            "name": "Tinna Sweet",
+            "position": "Designer",
+            "review": "<i>Typi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem \nconsuetudium lectorum. Mirum est notare quam littera gothica.</i>"
+          }
+        },
+        "32d13208-cd26-4d8c-b5f8-46948b9944af": {
+          "type": "item",
+          "settings": {
+            "name": "michel smith",
+            "position": "Developer",
+            "review": "<i>ypi non habent claritatem insitam, est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem \nconsuetudium lectorum. Mirum est notare quam littera gothica</i>"
+          }
+        }
+      },
+      "block_order": [
+        "4dd3ccfa-b339-44f2-bd0b-a5aa8459c9da",
+        "32d13208-cd26-4d8c-b5f8-46948b9944af"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "30px 0",
+        "margin_block": "0 0 60px",
+        "size": "100x100",
+        "slide_enable": true,
+        "navigation": true,
+        "pagination": false,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 1,
+        "column2": 1,
+        "column3": 1,
+        "column4": 1
+      }
+    },
+    "16393664454be92e72": {
+      "type": "product-list-banner",
+      "blocks": {
+        "fca09486-29dd-49d7-bf2b-8258ce6d404f": {
+          "type": "product",
+          "settings": {
+            "product-handle": "oslo-trek-hoodie"
+          }
+        },
+        "d371dbed-1cbe-4ddb-8f28-97ff510c606a": {
+          "type": "product",
+          "settings": {
+            "product-handle": "sacrificial-chair-design-1"
+          }
+        },
+        "12ece72f-61d7-4b75-a48e-dd79aed70d87": {
+          "type": "product",
+          "settings": {
+            "product-handle": "mach-street-sweatshirt"
+          }
+        },
+        "5272da1f-f23a-4118-bc09-4b5689087fb7": {
+          "type": "product",
+          "settings": {
+            "product-handle": "sacrificial-chair-design-4"
+          }
+        },
+        "e24cf501-aa53-437e-9fea-20d36e819043": {
+          "type": "product",
+          "settings": {
+            "product-handle": "sacrificial-chair-design-8"
+          }
+        }
+      },
+      "block_order": [
+        "fca09486-29dd-49d7-bf2b-8258ce6d404f",
+        "d371dbed-1cbe-4ddb-8f28-97ff510c606a",
+        "12ece72f-61d7-4b75-a48e-dd79aed70d87",
+        "5272da1f-f23a-4118-bc09-4b5689087fb7",
+        "e24cf501-aa53-437e-9fea-20d36e819043"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "heading": "Heading",
+        "sub_heading": "Sub heading",
+        "banner_position": "left"
+      }
+    },
+    "1630517878dbf2fdb0": {
+      "type": "product-deal",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "0 0 30px",
+        "margin_block": "0 0 60px",
+        "heading": "",
+        "sub_heading": "",
+        "collection_handle": "frontpage",
+        "limit": 8,
+        "item_countdown": false,
+        "countdown": true,
+        "product_style": "list",
+        "button_text": "",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 1,
+        "column2": 1,
+        "column3": 1,
+        "column4": 1
+      }
+    },
+    "16393667012ecfc31c": {
+      "type": "product-list-twobanner",
+      "blocks": {
+        "1639366701b6464990-0": {
+          "type": "product",
+          "settings": {
+            "product-handle": "oslo-trek-hoodie",
+            "product-handle1": "sacrificial-chair-design-2",
+            "banner_url": "",
+            "banner_position": "top"
+          }
+        },
+        "1639366701b6464990-1": {
+          "type": "product",
+          "settings": {
+            "product-handle": "sacrificial-chair-design-5",
+            "product-handle1": "sacrificial-chair-design-4",
+            "banner_url": "",
+            "banner_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "1639366701b6464990-0",
+        "1639366701b6464990-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "heading": "Heading",
+        "sub_heading": "Sub heading"
+      }
+    },
+    "16394740977988931e": {
+      "type": "video-banner",
+      "blocks": {
+        "c1369aae-b8c3-421c-ab10-db4c6d3e8d65": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT US",
+            "heading_color": "#201f1f",
+            "heading_size": 24,
+            "heading_margin_block": "0 0 5px"
+          }
+        },
+        "e4a9c056-aae1-450f-99d4-ff00bf3c3e05": {
+          "type": "text",
+          "settings": {
+            "text": "<i>Claritas est etiam processus dynamicus, qui sequitur.<i></i></i>",
+            "text_color": "#060606",
+            "text_size": 16,
+            "text_margin_block": "0 0 25px"
+          }
+        },
+        "34ef9a52-2c53-4b83-8e60-54bc9320c5ae": {
+          "type": "text",
+          "settings": {
+            "text": "<div class=\"mx-auto\" style=\"max-width: 655px\"><i>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</i></div>",
+            "text_color": "#060606",
+            "text_size": 16,
+            "text_margin_block": ""
+          }
+        }
+      },
+      "block_order": [
+        "c1369aae-b8c3-421c-ab10-db4c6d3e8d65",
+        "e4a9c056-aae1-450f-99d4-ff00bf3c3e05",
+        "34ef9a52-2c53-4b83-8e60-54bc9320c5ae"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_with": true,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "space_between": "0",
+        "video_position": "right",
+        "video_size": 6,
+        "video_size_ipad": 6,
+        "video_size_mobile": 12,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "Describe the video for customers using screen readers",
+        "text_align": "center"
+      }
+    }
+  },
+  "order": [
+    "163948024846cb1ead",
+    "1630410045bedb52b5",
+    "1639385876881b85aa",
+    "1638200046fbf44826",
+    "16303012351fd53818",
+    "1638200046fbf44825",
+    "16303012351fd53819",
+    "gallery_image_7A7eR8",
+    "1638203272229f5ce0",
+    "1638203416ea4f5a6f",
+    "1638203345edf1554f",
+    "1639452815e98a453e",
+    "16304318673182aaa7",
+    "16382024547f940706",
+    "1638198859510e66be",
+    "16394494642a300107",
+    "163820402146c04464",
+    "1626661118733af799",
+    "16393664454be92e72",
+    "1630517878dbf2fdb0",
+    "16393667012ecfc31c",
+    "16394740977988931e"
+  ]
+}

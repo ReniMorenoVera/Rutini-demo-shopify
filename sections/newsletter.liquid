@@ -1,0 +1,165 @@
+{%- if section.settings.color_bg != 'rgba(0,0,0,0)' -%}
+    {%- capture bgColor -%}
+        background-color: {{ section.settings.color_bg }};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.padding_block != blank -%}
+    {%- capture paddingblock -%}
+        padding: {{section.settings.padding_block}};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.margin_block != blank -%}
+    {%- capture marginblock -%}
+        margin: {{section.settings.margin_block}};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.image_bg != blank -%}
+    {%- capture image_bg -%}
+        background-image: url({{ section.settings.image_bg | img_url: 'master'}});
+    {%- endcapture -%}
+{%- endif -%}
+
+<div class="section-newsletter vela-section overflow-hidden" style="{{ bgColor }} {{ paddingblock }} {{ marginblock }} {{ image_bg }}">
+    <div class="container{% if section.settings.full_with %}-full{% endif %}">
+        <div class="vela-section__inner mx-auto {% if section.settings.image_bg != blank %}my-4 py-4{% endif %}">
+            {%- if section.settings.title != blank -%}
+                <div class="heading-group pb-md-3">
+                    <h3 class="heading">
+                        <span>{{ section.settings.title }}</span>
+                    </h3>
+                    {%- if section.settings.description != blank -%}
+                        <div class="sub-heading mx-auto">
+                            {{ section.settings.description }}
+                        </div>
+                    {%- endif -%}
+                </div>
+            {%- endif -%}             
+            <div class="velaContent">
+                {%- if section.settings.mailchimp -%}
+                    {%- assign form_action = block.settings.newsletter_form_action | replace: '/post?', '/post-json?' | append: '&amp;c=?' -%}
+                    <form action="{{ form_action }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="js-vela-newsletter formNewsletter clearfix">			
+                        <div class="input-group border border-2">
+                            <input class="fst-italic js-input-newsletter form-control border-0 bg-transparent" type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'newsletter.newsletter_email' | t }}" name="EMAIL" id="mail" aria-label="{{ 'newsletter.newsletter_email' | t }}" aria-describedby="btn-newsletter" required>						
+                            <span class="p-0">
+                                <button class="tn btn--newsletter" type="submit">
+                                    <span class="text d-none">{{ 'newsletter.button_label' | t }}</span>
+                                    <i class="icons">{% render 'icons', icon: 'paper-plane-o', attr: 'width: "20px"' %}</i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                {%- else -%}
+                    {% form 'customer' %}
+                        {%- if form.errors -%}
+                            <div class="alert-error alert alert-danger alert-dismissible fade show">
+                                {{ form.errors | default_errors }}
+                                <button type="button" data-dismiss="alert" aria-hidden="true" data-bs-dismiss="alert" aria-label="Close" class="btn-close"></button>
+                            </div>
+                        {%- endif -%}
+                        {%- if form.posted_successfully? -%}
+                            <div class="alert-success alert alert-success">
+                                {{ 'newsletter.newsletter_confirmation' | t }}
+                            </div>
+                        {%- else -%}
+                            <div class="input-group border border-2">
+                                <input class="fst-italic form-control bg-transparent border-0" id="newsletter-input" type="email" name="contact[email]" placeholder="{{ 'newsletter.newsletter_email' | t }}" required aria-describedby="btn-newsletter">
+                                <span class="p-0">
+                                    <button class="btn btn--newsletter" type="submit" aria-label="Center Align">
+                                        <span class="text d-none">{{ 'newsletter.button_label' | t }}</span>
+                                        <i class="icons">{% render 'icons', icon: 'paper-plane-o', attr: 'width="20px"' %}</i>
+                                    </button>
+                                </span>
+                                
+                            </div>
+                            <input type="hidden" name="action" value="0">
+                        {%- endif -%}
+                    {% endform %}
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Newsletter",
+        "class": "velaFramework",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Design Section"
+            },
+            {
+                "type": "checkbox",
+                "id": "full_with",
+                "label": "Enabel Full Width?"
+            },
+            {
+                "type": "color",
+                "id": "color_bg",
+                "label": "Background Color",
+                "default": "rgba(0,0,0,0)"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_bg",
+                "label": "Background Image"
+            },
+            {
+                "type": "text",
+                "id": "padding_block",
+                "label": "Padding",
+                "placeholder": "0px 0px",
+                "info": "Ex: 0px 0px 0px 0px and use desktop only"
+            },
+            {
+                "type": "text",
+                "id": "margin_block",
+                "label": "Margin",
+                "placeholder": "0px 0px",
+                "default": "0 0 30px",
+                "info": "Ex: 0px 0px 30px 0px"
+            },
+            {
+                "type": "header",
+                "content": "General Settings"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "placeholder": "Heading"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "placeholder": "Description for block",
+                "label": "Description"
+            },
+            {
+                "type": "checkbox",
+                "id": "mailchimp",
+                "label": "Use mailChimp",
+                "default": false
+            },
+            {
+				"type": "paragraph",
+				"content": "Uncheck if You use Newsletter of Shopify. Email will be saved to shopify customer. Admin -> Customers -> Accepts Marketting. You must send invite account for customer."
+			},
+			{
+				"type": "text",
+				"id": "newsletter_form_action",
+				"label": "MailChimp form action URL",
+				"info": "[Where do I find my MailChimp form action URL?](https:\/\/www.youtube.com/watch?v=mQ6UFLP_iEI)"
+			}
+        ],
+        "presets": [
+            {
+                "name": "Newsletter",
+                "category": "5. Vela Element",
+				"settings": {
+					"title": "Vela Newsletter"
+				}
+            }
+        ]
+	}
+{% endschema %}

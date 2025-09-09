@@ -1,0 +1,202 @@
+{%- if section.settings.color_bg != 'rgba(0,0,0,0)' -%}
+  {%- capture bgColor -%}
+        background-color: {{ section.settings.color_bg }};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.padding_block != blank -%}
+  {%- capture paddingblock -%}
+        padding: {{section.settings.padding_block}};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.margin_block != blank -%}
+  {%- capture marginblock -%}
+        margin: {{section.settings.margin_block}};
+    {%- endcapture -%}
+{%- endif -%}
+<div class="vela-section page-custom_form overflow-hidden" style="{{ bgColor}} {{ paddingblock }} {{ marginblock }}">
+  <div class="container{% if section.settings.full_with %}-fluid{% endif %}">
+    <div class="vela-section__inner">
+      <div class="row">
+        <div class="col-12 col-md-6 contact-form mb-4">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="contact-form__title mb-4 position-relative pb-3">
+              {{ section.settings.heading }}
+            </h2>
+          {%- endif -%}
+          <div class="contact-form__content">
+            {%- form 'contact', id: 'ContactForm' -%}
+              {%- if form.posted_successfully? -%}
+                <div class="alert-success alert alert-success" autofocus>
+                  {{ 'templates.contact.form.post_success' | t }}
+                </div>
+              {%- elsif form.errors -%}
+                <div class="alert-error alert alert-danger alert-dismissible fade show" autofocus>
+                  {{ form.errors | default_errors }}
+                  <button
+                    type="button"
+                    data-dismiss="alert"
+                    aria-hidden="true"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                    class="btn-close"
+                  ></button>
+                </div>
+              {%- endif -%}
+              <div class="row g-3 mb-3">
+                <div class="col">
+                  <label class="form__label mb-2" for="ContactForm-name">
+                    {{- 'templates.contact.form.name' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="form-control"
+                    placeholder="{{ 'templates.contact.form.name' | t }}"
+                    type="text"
+                    id="{{ formId }}-name"
+                    name="contact[{{ 'templates.contact.form.name' | t }}]"
+                    value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                    required
+                  >
+                </div>
+                <div class="col">
+                  <label class="form__label mb-2" for="ContactForm-email">
+                    {{- 'templates.contact.form.email' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="form-control"
+                    placeholder="{{ 'templates.contact.form.email' | t }}"
+                    type="email"
+                    id="{{ formId }}-email"
+                    name="contact[email]"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    aria-required="true"
+                    required
+                  >
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="form-group">
+                  <label class="form__label mb-2" for="ContactForm-phone">
+                    {{- 'templates.contact.form.phone' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="ContactForm-phone"
+                    class="field__input"
+                    autocomplete="tel"
+                    name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                    pattern="[0-9\-]*"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="{{ 'templates.contact.form.phone' | t }}"
+                    aria-required="true"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col">
+                  <label class="form__label mb-2" for="ContactForm-body">
+                    {{- 'templates.contact.form.comment' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span></label
+                  >
+                  <textarea
+                    class="form-control"
+                    placeholder="{{ 'templates.contact.form.comment' | t }}"
+                    rows="10"
+                    id="{{ formId }}-message"
+                    name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                    required
+                  >{% if form.body %}{{ form.body }}{% endif %}</textarea>
+                </div>
+                <p class="form-text">*Campos obligatorios</p>
+              </div>
+              <button type="submit" class="custom-form-btn btn-default  lh-base">
+                {{ 'templates.contact.form.send_contact' | t }}
+              </button>
+            {% endform %}
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="row justify-content-end">
+            <div class="contact_form--infor col-12 col-xl-10">
+              {%- if section.settings.image_form != blank -%}
+                <div class="contact_form__map d-flex w-100">
+                  <img src="{{ section.settings.image_form | img_url: 'master' }}" class="img-contact-form" width='' height=''>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Design Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_with",
+      "label": "Enabel Full Width?"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background Color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "image_picker",
+      "id": "contact-form-bg",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "padding_block",
+      "label": "Padding",
+      "placeholder": "0px 0px",
+      "info": "Ex: 0px 0px 0px 0px and use desktop only"
+    },
+    {
+      "type": "text",
+      "id": "margin_block",
+      "label": "Margin",
+      "placeholder": "0px 0px",
+      "default": "0 0 30px",
+      "info": "Ex: 0px 0px 30px 0px"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Contact form",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Contact info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_form",
+      "label": "Imagen"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Form",
+      "category": "4. element"
+    }
+  ]
+}
+{% endschema %}

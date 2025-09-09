@@ -1,0 +1,569 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb-page",
+      "disabled": true,
+      "settings": {
+        "padding_block": "",
+        "margin_block": "0 0 60px",
+        "bgimage": true,
+        "breadcrumb_title": "Our story",
+        "enable_title": "desktop",
+        "breadcrumb_bg": "rgba(0,0,0,0)",
+        "breadcrumb_color_heading": "rgba(0,0,0,0)",
+        "breadcrumb_color": "rgba(0,0,0,0)",
+        "breadcrumb_color_link": "rgba(0,0,0,0)",
+        "breadcrumb-height": "200px",
+        "breadcrumb-mheight": "200px",
+        "text-align": "center"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px"
+      }
+    },
+    "slideshow_fLzF8M": {
+      "type": "slideshow",
+      "blocks": {
+        "image_BzrLQd": {
+          "type": "image",
+          "settings": {
+            "content_color": "rgba(0,0,0,0)",
+            "position_content": true,
+            "image": "shopify://shop_images/banner-eventos.png",
+            "link": "",
+            "alignment": "text-left align-top",
+            "text-alignment": "center",
+            "slides_effect": "leftright",
+            "subheading": "",
+            "subheading_color": "#000000",
+            "subheading_font_family": "text",
+            "subheading_font_size": 18,
+            "title": "",
+            "title_color": "#000000",
+            "title_font_family": "ff-special",
+            "title_font_size": 60,
+            "title2": "",
+            "title2_color": "#000000",
+            "title2_font_family": "text",
+            "title2_font_size": 149,
+            "desc": "",
+            "desc_color": "#000000",
+            "desc_font_family": "text",
+            "desc_font_size": 18,
+            "btn_text": "",
+            "btn_font_size": 14,
+            "btn_link": "",
+            "btn_padding": "10px 30px",
+            "btn_text_color": "#ffffff",
+            "btn_border_color": "#000000",
+            "btn_bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_BzrLQd"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 426px) {.card__image {height: 175px !important; background-size: cover; background-position: unset; }}"
+      ],
+      "settings": {
+        "full_with": true,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "",
+        "navigation": true,
+        "pagination": true,
+        "fade": true,
+        "autoplay": true,
+        "autoplay_speed": "8000"
+      }
+    },
+    "logo_list_gJxiqz": {
+      "type": "logo-list",
+      "blocks": {
+        "image_w34r8G": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "name": "Adidas"
+          }
+        },
+        "image_prVbWE": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "name": "Adolfo Dominguez"
+          }
+        },
+        "image_KtE9km": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "name": "Alejandro Sanz"
+          }
+        },
+        "image_Wf3FKa": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "name": "Agatha"
+          }
+        },
+        "image_MWzJhY": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "name": "Algabo"
+          }
+        }
+      },
+      "block_order": [
+        "image_w34r8G",
+        "image_prVbWE",
+        "image_KtE9km",
+        "image_Wf3FKa",
+        "image_MWzJhY"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "60px 0 30px",
+        "heading": "PRODUCTO MÁS VISTO",
+        "sub_heading": "",
+        "logo_size": "150x150",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 5,
+        "column2": 5,
+        "column3": 3,
+        "column4": 1
+      }
+    },
+    "gallery_image_idfnbe": {
+      "type": "gallery-image",
+      "blocks": {
+        "item_D33mW9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-1.png",
+            "link": ""
+          }
+        },
+        "item_xReEBz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-2.png",
+            "link": ""
+          }
+        },
+        "item_QBN9qp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-3.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_D33mW9",
+        "item_xReEBz",
+        "item_QBN9qp"
+      ],
+      "custom_css": [
+        "img {width: 100%;}",
+        ".gallery .container {padding: 30px 0;}",
+        ".slick-prev {left: 14px;}",
+        ".slick-next {right: 14px;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "",
+        "heading": "",
+        "sub_heading": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "space_between": "4",
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 3,
+        "column3": 2,
+        "column4": 1
+      }
+    },
+    "gallery_image_PzTiJB": {
+      "type": "gallery-image",
+      "blocks": {
+        "item_zDyWKi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-1.png",
+            "link": ""
+          }
+        },
+        "item_qxzRJY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-2.png",
+            "link": ""
+          }
+        },
+        "item_6jNzgx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-3.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_zDyWKi",
+        "item_qxzRJY",
+        "item_6jNzgx"
+      ],
+      "custom_css": [
+        "img {width: 100%;}",
+        ".gallery .container {padding: 0 0 30px;}",
+        ".slick-prev {left: 14px;}",
+        ".slick-next {right: 14px;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "",
+        "heading": "",
+        "sub_heading": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "space_between": "4",
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 3,
+        "column3": 2,
+        "column4": 1
+      }
+    },
+    "heading_LDG9GJ": {
+      "type": "heading",
+      "custom_css": [
+        ".sub-heading {font-style: italic;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "50px 0 10px",
+        "heading": "PRODUCTO MÁS VISTO",
+        "sub_heading": "Claritas est etiam processus dynamicus, qui sequitur.",
+        "text_alignment": "center"
+      }
+    },
+    "product_tab_LBNYzY": {
+      "type": "product-tab",
+      "blocks": {
+        "tab_wVWgwQ": {
+          "type": "tab",
+          "settings": {
+            "title": "PERFUMES",
+            "collection": "perfumes"
+          }
+        },
+        "tab_FVXCAe": {
+          "type": "tab",
+          "settings": {
+            "title": "MAQUILLAJE",
+            "collection": "mascara-de-pestanas"
+          }
+        },
+        "tab_KFRj3X": {
+          "type": "tab",
+          "settings": {
+            "title": "HOT SALE",
+            "collection": "lo-mas-vendido"
+          }
+        }
+      },
+      "block_order": [
+        "tab_wVWgwQ",
+        "tab_FVXCAe",
+        "tab_KFRj3X"
+      ],
+      "custom_css": [
+        ".card__image {padding-top: 100% !important;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "limit": 8,
+        "product_style": "grid",
+        "button_text": "",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 4,
+        "column2": 3,
+        "column3": 2,
+        "column4": 2
+      }
+    },
+    "image_list_DQFKcn": {
+      "type": "image-list",
+      "blocks": {
+        "image_XqjxAq": {
+          "type": "image",
+          "settings": {
+            "width": "col-12",
+            "image": "shopify://shop_images/banner1.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_XqjxAq"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "90px 0",
+        "image_ratio": "adapt",
+        "crop": false,
+        "effect": "effectNone",
+        "space_between": "4",
+        "custom_css": ""
+      }
+    },
+    "gallery_image_bEbrHA": {
+      "type": "gallery-image",
+      "blocks": {
+        "item_mhkgk7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-1.png",
+            "link": ""
+          }
+        },
+        "item_3TjkTp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-2.png",
+            "link": ""
+          }
+        },
+        "item_bYRxBh": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-3.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_mhkgk7",
+        "item_3TjkTp",
+        "item_bYRxBh"
+      ],
+      "custom_css": [
+        "img {width: 100%;}",
+        ".gallery .container {padding: 0 0 30px;}",
+        ".slick-prev {left: 14px;}",
+        ".slick-next {right: 14px;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "",
+        "heading": "",
+        "sub_heading": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "space_between": "4",
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 3,
+        "column3": 2,
+        "column4": 1
+      }
+    },
+    "gallery_image_9KhKdL": {
+      "type": "gallery-image",
+      "blocks": {
+        "item_zhbnb7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-1.png",
+            "link": ""
+          }
+        },
+        "item_PrncPX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-2.png",
+            "link": ""
+          }
+        },
+        "item_PB6GUh": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/img-3.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_zhbnb7",
+        "item_PrncPX",
+        "item_PB6GUh"
+      ],
+      "custom_css": [
+        "img {width: 100%;}",
+        ".gallery .container {padding: 0 0 30px;}",
+        ".slick-prev {left: 14px;}",
+        ".slick-next {right: 14px;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "",
+        "heading": "",
+        "sub_heading": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "space_between": "4",
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 3,
+        "column2": 3,
+        "column3": 2,
+        "column4": 1
+      }
+    },
+    "heading_WnAQdK": {
+      "type": "heading",
+      "custom_css": [
+        ".sub-heading {font-style: italic;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "50px 0 10px",
+        "heading": "PRODUCTO MÁS VISTO",
+        "sub_heading": "Claritas est etiam processus dynamicus, qui sequitur",
+        "text_alignment": "center"
+      }
+    },
+    "product_tab_RdBW9t": {
+      "type": "product-tab",
+      "blocks": {
+        "tab_39QDVq": {
+          "type": "tab",
+          "settings": {
+            "title": "PERFUMES",
+            "collection": "perfumes"
+          }
+        },
+        "tab_iRjhgm": {
+          "type": "tab",
+          "settings": {
+            "title": "MAQUILLAJE",
+            "collection": "mascara-de-pestanas"
+          }
+        },
+        "tab_hN3EFm": {
+          "type": "tab",
+          "settings": {
+            "title": "HOT SALE",
+            "collection": "lo-mas-vendido"
+          }
+        }
+      },
+      "block_order": [
+        "tab_39QDVq",
+        "tab_iRjhgm",
+        "tab_hN3EFm"
+      ],
+      "custom_css": [
+        ".card__image {padding-top: 100% !important;}"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 90px",
+        "limit": 8,
+        "product_style": "grid",
+        "button_text": "",
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": true,
+        "autoplay": true,
+        "autoplay_speed": "10000",
+        "column1": 4,
+        "column2": 3,
+        "column3": 2,
+        "column4": 2
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "slideshow_fLzF8M",
+    "logo_list_gJxiqz",
+    "gallery_image_idfnbe",
+    "gallery_image_PzTiJB",
+    "heading_LDG9GJ",
+    "product_tab_LBNYzY",
+    "image_list_DQFKcn",
+    "gallery_image_bEbrHA",
+    "gallery_image_9KhKdL",
+    "heading_WnAQdK",
+    "product_tab_RdBW9t"
+  ]
+}

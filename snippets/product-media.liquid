@@ -1,0 +1,109 @@
+{%- assign on_sale = false -%}
+{%- if product.compare_at_price > product.price -%}
+{%- assign on_sale = true -%}
+{%- endif -%}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign featured_media = current_variant.featured_media | default: product.featured_media -%}
+{%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
+{%- assign stacked = false -%}
+{%- assign thumb_vertical = false -%}
+{%- assign thumb_style = nil -%}
+{% if section.settings.media_layout == "stacked" %}
+	{% assign stacked = true %}
+{%- else -%}
+	{% assign thumb_vertical = true %}
+{% endif %}
+{%- if section.settings.media_layout == "thumbnails-left"  or section.settings.media_layout == "thumbnails-right" -%}
+	{%- assign thumb_style = "product-single__media--thumbnails-vertical" -%}
+{% endif %}
+<div class="js-product-single-media product-single__media {% if stacked %}product-single__media--stacked{% endif %} {% if thumb_vertical %}product-single__media--{{section.settings.media_layout}}{% endif %} {{thumb_style}} {% unless product.media.size > 1 %}no-thumbnail{% endunless%}">
+	<div class="product-single__main-media">
+		<div class="js-product-media-group js-product-media-group-{{ section.id }} product-single__media-group">
+			{%- if on_sale and section.settings.product_card_sale -%}
+                {% capture saved_amount %}{{ product.compare_at_price | minus: product.price | times: 100 | divided_by : product.compare_at_price  }}{% endcapture %}
+                <span class="label-on-sale"><span class="d-block overflow-hidden px-1">{{ 'products.general.save_html' | t: saved_amount: saved_amount }}%</span></span>
+                
+            {%- endif -%}
+		{%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+		{%- assign width = 770 -%}
+		{%- assign height = 770 -%}
+		{%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
+		{%- for media in product.media -%}
+			{%- assign featured = false -%}
+			{%- if media == featured_media -%}
+			{%- assign featured = true -%}
+			{%- endif -%}
+			{%- capture thumbnail_alt -%}
+			{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+				{{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+			{%- elsif media.media_type == 'model' -%}
+				{{ 'products.product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+			{%- else -%}
+				{{ 'products.product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+			{%- endif -%}
+			{%- endcapture -%}
+
+			<div class="js-product-media-item product-single__media-item"
+			data-slick-media-label="{{ thumbnail_alt }}">
+			{%- if on_sale and settings.product_card_sale -%}
+				{% capture saved_amount %}{{ product.compare_at_price | minus: product.price | times: 100 | divided_by : product.compare_at_price  }}{% endcapture %}
+				<span class="label-on-sale-pdp"><span class="d-block overflow-hidden px-1">{{ 'products.general.save_html' | t: saved_amount: saved_amount }}%</span></span>
+				
+			{%- endif -%}
+			{% for collection in product.collections limit: limit %}
+				{%- if collection.title == 'Cucarda' -%}
+				  {% comment %} <span class="label-category-pdp"><span class="d-block overflow-hidden px-1">
+					  {{ collection.title }}
+					  <img class="cucarda-image" src="{{ settings.cucarda_image | img_url: 'large' }}" alt="Header Image">
+					</span></span> {% endcomment %}
+					<img class="cucarda-image" src="{{ settings.cucarda_image | img_url: 'large' }}" alt="Header Image">
+				{%- endif -%}
+			  {% endfor %}
+			{%- include 'media' with media, enable_image_zoom: enable_image_zoom, featured: featured, width: width, height: height -%}
+			</div>
+		{%- endfor -%}
+		</div>
+		<div class="main-media__slick-controls">
+			<button class="slick__arrow slick__arrow--previous" data-slick-previous>
+				{% render 'icons', icon: 'angle-left' %}
+			</button>
+			<button class="slick__arrow slick__arrow--next"  data-slick-next>
+				{% render 'icons', icon: 'angle-right' %}
+			</button>
+		</div>
+	</div>
+
+	{%- unless stacked -%}
+		{% if product.media.size > 1 %}
+			<div class="product-single__thumbnail-wrapper position-relative">
+				<div class="js-product-thumbnails js-product-thumbnails-{{ section.id }} product-single__thumbnails">
+					{% for media in product.media %}
+						<div class="product-media__wrapper">
+							{%- capture thumbnail_alt -%}
+								{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+								{{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+								{%- elsif media.media_type == 'model' -%}
+								{{ 'products.product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+								{%- else -%}
+								{{ 'products.product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+								{%- endif -%}
+							{%- endcapture -%}
+							<a href="javascript:void(0)"
+								class="product-single__thumbnail{% if media == featured_media %} active-thumb{% endif %} thumbnail-type_{{ media.media_type }}"
+								data-media="{{ media | img_url: 'grande' }}"
+								data-media-id="{{ section.id }}-{{ media.id }}"
+								data-product-thumbnail>
+								{% include 'img-global', image: media, image_size: '150x150'  %}
+								{%- if media.media_type == 'video' or media.media_type == 'external_video' or media.media_type == 'model' -%}
+								<div class="product-single__thumbnail-badge">
+									{% include 'svg-definitions' with media.media_type, directly: true %}
+								</div>
+								{%- endif -%}
+							</a>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+		{% endif %}
+	{%- endunless -%}
+</div>

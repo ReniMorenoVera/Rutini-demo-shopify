@@ -1,0 +1,220 @@
+{%- if section.settings.color_bg != 'rgba(0,0,0,0)' -%}
+  {%- capture bgColor -%}
+        background-color: {{ section.settings.color_bg }};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.padding_block != blank -%}
+  {%- capture paddingblock -%}
+        padding: {{section.settings.padding_block}};
+    {%- endcapture -%}
+{%- endif -%}
+{%- if section.settings.margin_block != blank -%}
+  {%- capture marginblock -%}
+        margin: {{section.settings.margin_block}};
+    {%- endcapture -%}
+{%- endif -%}
+<div class="vela-section page-custom_form overflow-hidden" style="{{ bgColor}} {{ paddingblock }} {{ marginblock }}">
+  <div class="container{% if section.settings.full_with %}-fluid{% endif %}">
+    <div class="vela-section__inner">
+      <div class="row">
+        <div class="col-12 col-md-6 contact-form mb-4">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="custom-form__title mb-4 position-relative pb-3">
+              {{ section.settings.heading }}
+            </h2>
+          {%- endif -%}
+          <div class="contact-form__content">
+            {%- form 'contact', id: 'CustomForm' -%}
+              {%- if form.posted_successfully? -%}
+                <div class="alert-success alert alert-success" autofocus>
+                  {{ 'templates.contact.form.post_success' | t }}
+                </div>
+              {%- elsif form.errors -%}
+                <div class="alert-error alert alert-danger alert-dismissible fade show" autofocus>
+                  {{ form.errors | default_errors }}
+                  <button
+                    type="button"
+                    data-dismiss="alert"
+                    aria-hidden="true"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                    class="btn-close"
+                  ></button>
+                </div>
+              {%- endif -%}
+              <div class="row g-3 mb-3">
+                <div class="col">
+                  <label class="custom-form__label mb-2" for="CustomForm-name">
+                    {{- 'templates.contact.form.namelastname' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="form-control"
+                    placeholder="{{ 'templates.contact.form.namelastname' | t }}"
+                    type="text"
+                    id="{{ formId }}-namelastname"
+                    name="contact[{{ 'templates.contact.form.namelastname' | t }}]"
+                    value="{% if form[namelastname] %}{{ form[namelastname] }}{% elsif customer %}{{ customer.namelastname }}{% endif %}"
+                    required
+                  >
+                </div>
+                <div class="col">
+                  <label class="custom-form__label mb-2" for="CustomForm-email">
+                    {{- 'templates.contact.form.email' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="form-control"
+                    placeholder="{{ 'templates.contact.form.email' | t }}"
+                    type="email"
+                    id="{{ formId }}-email"
+                    name="contact[email]"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                    aria-required="true"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col">
+                  <label class="custom-form__label mb-2" for="CustomForm-phone">
+                    {{- 'templates.contact.form.phone' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="CustomForm-phone"
+                    class="field__input"
+                    autocomplete="tel"
+                    name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                    pattern="[0-9\-]*"
+                    value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                    placeholder="{{ 'templates.contact.form.phone' | t }}"
+                    aria-required="true"
+                    required
+                  >
+                </div>
+                <div class="col">
+                  <label class="custom-form__label mb-2" for="CustomForm-order_number_form">
+                    {{- 'templates.contact.form.order_number_form' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="CustomForm-order-number"
+                    name="contact[order_number]"
+                    value="{% if form.order_number %}{{ form.order_number }}{% endif %}"
+                    placeholder="{{ 'templates.contact.form.order_number_form' | t }}"
+                    aria-required="true"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col">
+                  <label class="custom-form__label mb-2" for="CustomForm-body">
+                    {{- 'templates.contact.form.comment' | t -}}
+                    <span class="text-danger" aria-hidden="true">*</span></label
+                  >
+                  <textarea
+                    class="form-control"
+                    placeholder="{{ 'templates.contact.form.comment' | t }}"
+                    rows="10"
+                    id="{{ formId }}-message"
+                    name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                    required
+                  >{% if form.body %}{{ form.body }}{% endif %}</textarea>
+                </div>
+                <p class="form-text">*Campos obligatorios</p>
+              </div>
+              <button type="submit" class="custom-form-btn btn-default lh-base ">
+                {{ 'templates.contact.form.send' | t }}
+              </button>
+            {% endform %}
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="row justify-content-end">
+            <div class="contact_form--infor col-12 col-xl-10">
+              {%- if section.settings.image_form != blank -%}
+                <div class="contact_form__map d-flex w-100">
+                  <img src="{{ section.settings.image_form | img_url: 'master' }}" class="img-custom-form" loading="lazy" width='' height=''>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Design Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_with",
+      "label": "Enabel Full Width?"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background Color",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "image_picker",
+      "id": "contact-form-bg",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "padding_block",
+      "label": "Padding",
+      "placeholder": "0px 0px",
+      "info": "Ex: 0px 0px 0px 0px and use desktop only"
+    },
+    {
+      "type": "text",
+      "id": "margin_block",
+      "label": "Margin",
+      "placeholder": "0px 0px",
+      "default": "0 0 30px",
+      "info": "Ex: 0px 0px 30px 0px"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Custom form",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Custom info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_form",
+      "label": "Imagen"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Form",
+      "category": "4. element"
+    }
+  ]
+}
+{% endschema %}

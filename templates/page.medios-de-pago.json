@@ -1,0 +1,258 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "breadcrumb-page",
+      "settings": {
+        "padding_block": "0px",
+        "margin_block": "0px",
+        "bgimage": false,
+        "breadcrumb_title": "Medios de Pago",
+        "enable_title": "none",
+        "breadcrumb_bg": "#ffffff",
+        "breadcrumb_color_heading": "#201f1f",
+        "breadcrumb_color": "#79b6c8",
+        "breadcrumb_color_link": "#201f1f",
+        "breadcrumb-height": "60px",
+        "breadcrumb-mheight": "60px",
+        "text-align": "start"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px"
+      }
+    },
+    "16266097795e2c2841": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_pJ7Fhr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1.png",
+            "width": 100,
+            "margin": "0 0 15px"
+          }
+        },
+        "54fe1361-e274-4064-8012-4d009c700f20": {
+          "type": "text",
+          "settings": {
+            "text": "Medios de pago",
+            "text_style": "h3",
+            "text_color_desktop": "#000000",
+            "text_font_size_desktop": 24,
+            "margin_desktop": "0 0 25px",
+            "text_color_tablet": "#000000",
+            "text_font_size_tablet": 24,
+            "margin_tablet": "",
+            "text_color_mobile": "#000000",
+            "text_font_size_mobile": 24,
+            "margin_mobile": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_pJ7Fhr",
+        "54fe1361-e274-4064-8012-4d009c700f20"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "bg_align": "center",
+        "padding_block": "30px 0px 30px 0px",
+        "margin_block": "0px",
+        "space_between": "4",
+        "banner_size": 6,
+        "banner_size_ipad": 6,
+        "banner_size_mobile": 12,
+        "banner_position": "left",
+        "text_align": "left",
+        "banner_mobile": "false",
+        "banner_url": "",
+        "padding_content": "",
+        "content_color_bg": "rgba(0,0,0,0)"
+      }
+    },
+    "services_UQWPRx": {
+      "type": "services",
+      "blocks": {
+        "item_xi7eqg": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/Component_2.png",
+            "box_title": "Tarjetas de Crédito a través de MercadoPago",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        },
+        "item_3VhMRH": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/Component_2.png",
+            "box_title": "Tarjetas de Débito a través de MercadoPago",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        },
+        "item_Qfe4Nf": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/image_31.png",
+            "box_title": "Dinero en Cuenta MercadoPago",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        },
+        "item_PV794K": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/image_32.png",
+            "box_title": "Transferencia Bancaria",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        }
+      },
+      "block_order": [
+        "item_xi7eqg",
+        "item_3VhMRH",
+        "item_Qfe4Nf",
+        "item_PV794K"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "heading": "",
+        "sub_heading": "",
+        "iconsize": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": false,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 4,
+        "column2": 3,
+        "column3": 1,
+        "column4": 1
+      }
+    },
+    "services_EjnDLf": {
+      "type": "services",
+      "blocks": {
+        "item_bN6fBz": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/image_38.png",
+            "box_title": "Banco La Pampa",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        },
+        "item_LRmzgf": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/image_39.png",
+            "box_title": "Tarjeta Naranja",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        },
+        "item_taT6PM": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/image_40.png",
+            "box_title": "Banco Galicia",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        },
+        "item_amUefG": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/image_41.png",
+            "box_title": "Mastercard",
+            "color_title": "#000000",
+            "title_font_size": 12,
+            "box_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus felis a lacus finibus iaculis. N lobortis efficitur libero, et tincidunt lectus dictum vitae. Vivamus justo eros, pellentesque vitae bibendum et, auctor eget felis. Nam euismod ornare ligula, vestibulum interdum felis fringilla non. ",
+            "color_desc": "#000000",
+            "desc_font_size": 12
+          }
+        }
+      },
+      "block_order": [
+        "item_bN6fBz",
+        "item_LRmzgf",
+        "item_taT6PM",
+        "item_amUefG"
+      ],
+      "settings": {
+        "full_with": false,
+        "color_bg": "rgba(0,0,0,0)",
+        "padding_block": "",
+        "margin_block": "0 0 30px",
+        "heading": "Promociones del mes",
+        "sub_heading": "",
+        "iconsize": "",
+        "image_ratio": "adapt",
+        "crop": false,
+        "slide_enable": true,
+        "navigation": true,
+        "infinite": false,
+        "autoplay": false,
+        "autoplay_speed": "10000",
+        "column1": 4,
+        "column2": 3,
+        "column3": 1,
+        "column4": 1
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "main",
+    "16266097795e2c2841",
+    "services_UQWPRx",
+    "services_EjnDLf"
+  ]
+}
