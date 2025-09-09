@@ -1041,7 +1041,45 @@
         "description": "Describe the video for customers using screen readers",
         "text_align": "center"
       }
+    },
+    "services_grid": {
+  "type": "services-grid",
+  "blocks": {
+    "service1": {
+      "type": "service",
+      "settings": {
+        "title": "3D Printing",
+        "background_color": "#D2D2C7",
+        "link": "#"
+      }
+    },
+    "service2": {
+      "type": "service",
+      "settings": {
+        "title": "Expert Consultation",
+        "background_color": "#E6E6DD",
+        "link": "#"
+      }
+    },
+    "service3": {
+      "type": "service",
+      "settings": {
+        "title": "Laser Cutting",
+        "background_color": "#F1F1EA",
+        "link": "#"
+      }
+    },
+    "service4": {
+      "type": "service",
+      "settings": {
+        "title": "Bespoke Fabrication",
+        "background_color": "#DADACE",
+        "link": "#"
+      }
     }
+  },
+  "block_order": ["service1", "service2", "service3", "service4"]
+}
   },
   "order": [
     "163948024846cb1ead",
@@ -1065,6 +1103,7 @@
     "16393664454be92e72",
     "1630517878dbf2fdb0",
     "16393667012ecfc31c",
-    "16394740977988931e"
+    "16394740977988931e",
+    "services_grid"
   ]
 }
