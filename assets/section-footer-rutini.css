@@ -1,0 +1,44 @@
+:root{
+  --rf-bg:#2d2f32;            /* fondo */
+  --rf-text:#d9d3c9;          /* texto base */
+  --rf-accent:#b99976;        /* dorado/enlaces */
+  --rf-border:#444;
+}
+
+.rutini-footer{background:var(--rf-bg); color:var(--rf-text);}
+.rutini-footer a{color:var(--rf-text); text-decoration:none;}
+.rutini-footer a:hover{color:var(--rf-accent);}
+
+.rf-top{padding:48px 0 24px; border-bottom:1px solid var(--rf-border);}
+.rf-grid{display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap:48px; align-items:start;}
+.rf-brand img{max-width: 260px; height:auto; display:block;}
+.rf-brand-sub{margin-top:8px; opacity:.85; font-size:.92rem; letter-spacing:.06em}
+
+.rf-col h4{color:var(--rf-accent); font-weight:600; margin:0 0 14px; font-size:1rem; letter-spacing:.04em}
+.rf-col ul{list-style:none; padding:0; margin:0;}
+.rf-col li + li{margin-top:8px;}
+
+.rf-right{display:flex; gap:20px; justify-content:flex-end; align-items:center; flex-wrap:wrap}
+.rf-social a{display:inline-flex; width:36px; height:36px; border-radius:50%; align-items:center; justify-content:center; border:1px solid var(--rf-text); margin-right:8px;}
+.rf-social svg{width:18px; height:18px; fill:var(--rf-text);}
+.rf-social a:hover{border-color:var(--rf-accent);}
+.rf-social a:hover svg{fill:var(--rf-accent);}
+
+.rf-btn{background:transparent; border:1px solid var(--rf-text); color:var(--rf-text); padding:10px 16px; border-radius:28px; font-size:.95rem; transition:all .2s}
+.rf-btn:hover{border-color:var(--rf-accent); color:var(--rf-accent)}
+
+.rf-bottom{padding:16px 0 28px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap}
+.rf-powered{display:flex; align-items:center; gap:12px; opacity:.9}
+.rf-powered img{height:18px; width:auto}
+.rf-legal{opacity:.85; font-size:.92rem}
+.rf-badges img{height:46px; width:auto; margin-left:12px}
+
+@media (max-width: 1024px){
+  .rf-grid{grid-template-columns: 1fr 1fr; gap:32px}
+  .rf-right{justify-content:flex-start}
+}
+@media (max-width: 640px){
+  .rf-grid{grid-template-columns: 1fr; gap:24px}
+  .rf-bottom{flex-direction:column; align-items:flex-start}
+  .rf-brand img{max-width: 220px;}
+}

@@ -61,7 +61,16 @@
                 </span>
               </a>
             </div>
+            <a href="/account/login" class="header__icon header__icon--account" aria-label="Iniciar sesión">
+              <img
+                src="{{ 'account-login.png' | asset_url }}"
+                alt="Iniciar sesión"
+                width="24" height="24"
+                style="display:flex"
+              >
+              </a>
             {%- include 'header-cart' -%}
+            
             {%- render 'header-search' -%}
           </div>
 

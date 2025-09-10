@@ -1,4 +1,4 @@
-{%- if section.settings.enable_country_selector -%}
+{% comment %} {%- if section.settings.enable_country_selector -%}
   {{ 'disclosure.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 {%- if section.settings.enable -%}
@@ -220,4 +220,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} {% endcomment %}

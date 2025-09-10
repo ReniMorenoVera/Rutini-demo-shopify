@@ -11,7 +11,6 @@
             </div>
         </div>
 
-        {%- comment -%} Columns of footer links (driven by Navigation menus) {%- endcomment -%}
 <div class="footer-links" style="display:flex; gap:40px; flex-wrap:wrap;">
   {%- for block in section.blocks -%}
     {%- if block.type == 'links_column' -%}
@@ -40,7 +39,9 @@
 
 
 
-        <div style="display: flex; gap : 20px; align-items: flex-end;">
+        
+        <div style="display: flex; flex-direction: column; align-items: flex-end;">
+            <div style="display: flex; gap : 20px; align-items: flex-end;">
             <img style="width:38px; height: 38px;"
                 src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/1fc53164-ec77-4d1b-a320-5ec161091711___36be8332247ea8a976d7dc8c3330a558.webp"
                 alt="">
@@ -51,12 +52,8 @@
                 src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/8487b892-ccd7-4d74-9a2e-f1261feff092___11204ee653d507d77d315274ba6d2552.png"
                 alt="">
         </div>
-        <div style="display: flex; flex-direction: column; align-items: flex-end;">
-            <p>Medios de pago</p>
-            <p>Términos y Condiciones</p>
             <button
-                style="background-color: transparent; padding: 11px 12px; border: 1px solid white; border-radius: 20px; color: white;">Arrepentimiento
-                de compra</button>
+                style="background-color: transparent; padding: 11px 12px; border: 1px solid white; border-radius: 20px; color: white;">BOTÓN DE ARREPENTIMIENTO</button>
         </div>
     </div>
 
@@ -70,11 +67,12 @@
                 src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/pierce-logo___216532d0ea67b678bb537aada0dc23e0.png"
                 alt="">
         </div>
-
-        <div style="margin-bottom: 10px;">
-                    <p style="margin: 0;">BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.
-Av. Rivadavia 413 piso 8º Buenos Aires, Argentina. | ® Rutini Wines 2023, todos los derechos reservados.</p>
-                </div>
+        
+        {% if section.settings.legal_notice != blank %}
+          <div style="margin-bottom: 10px;">
+            <div style="margin:0;">{{ section.settings.legal_notice }}</div>
+          </div>
+        {% endif %}
         
 
         <div style="display: flex;">
@@ -95,13 +93,18 @@ Av. Rivadavia 413 piso 8º Buenos Aires, Argentina. | ® Rutini Wines 2023, todo
       "type": "image_picker",
       "id": "footer-bg-image",
       "label": "Footer background Image"
-    }
+    },
+    {
+  "type": "richtext",
+  "id": "legal_notice",
+  "label": "Texto legal / disclaimer",
+  "default": "<p>BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS. Av. Rivadavia 413 piso 8º Buenos Aires, Argentina. | © Rutini Wines 2023, todos los derechos reservados.</p>"
+}
   ],
   "blocks": [
     {
   "type": "links_column",
   "name": "Links column",
-  "limit": 6,
   "settings": [
     {
       "type": "text",
@@ -112,7 +115,7 @@ Av. Rivadavia 413 piso 8º Buenos Aires, Argentina. | ® Rutini Wines 2023, todo
     {
       "type": "link_list",
       "id": "menu",
-      "label": "Menu (Navigation)"
+      "label": "Links"
     }
   ]
 }
