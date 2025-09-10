@@ -293,21 +293,9 @@
       }
     },
     "home_image_with_text": {
-  "type": "image-text-rutini",
-  "settings": {
-    "padding_block": "30px 0",
-    "margin_block": "0 0 60px"
-    /* acá podés agregar más settings si tu schema los define:
-       "image": "shopify://shop_images/archivo.jpg",
-       "heading": "Título",
-       "text": "Descripción",
-       "button_label": "Ver más",
-       "button_link": "shopify://collections/all",
-       "image_position": "left",
-       "text_align": "center"
-    */
-  }
-},
+      "type": "image-text-rutini",
+      "settings": {}
+    },
     "1630410045bedb52b5": {
       "type": "services",
       "blocks": {
@@ -376,14 +364,14 @@
       }
     },
     "titulo_vitrina_1": {
-  "type": "section-title",
-  "settings": {
-    "title": "Selección del Enólogo",
-    "color": "#a8825a",
-    "uppercase": true,
-    "align": "center"
-  }
-},
+      "type": "section-title",
+      "settings": {
+        "title": "Selección del Enólogo",
+        "align": "center",
+        "color": "#a8825a",
+        "uppercase": true
+      }
+    },
     "1639385876881b85aa": {
       "type": "product-tab",
       "blocks": {
@@ -413,7 +401,6 @@
         "margin_block": "0 0 90px",
         "limit": 12,
         "product_style": "grid",
-        "button_text": "Ver más",
         "slide_enable": true,
         "navigation": true,
         "infinite": true,
@@ -425,43 +412,15 @@
         "column4": 2
       }
     },
-    // "1638200046fbf44826": {
-    //   "type": "image-list",
-    //   "blocks": {
-    //     "1638200046956339fd-0": {
-    //       "type": "image",
-    //       "settings": {
-    //         "width": "col-12",
-    //         "image": "shopify://shop_images/Must_-_Web_-_Noviembre-05_4271e72c-c15e-4670-9c04-df07837a0941.jpg",
-    //         "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-03_3.jpg",
-    //         "link": "shopify://collections/all"
-    //       }
-    //     }
-    //   },
-    //   "block_order": [
-    //     "1638200046956339fd-0"
-    //   ],
-    //   "settings": {
-    //     "full_with": false,
-    //     "color_bg": "rgba(0,0,0,0)",
-    //     "padding_block": "30px 0",
-    //     "margin_block": "0 0 60px",
-    //     "image_ratio": "adapt",
-    //     "crop": true,
-    //     "effect": "effectNone",
-    //     "space_between": "4",
-    //     "custom_css": ""
-    //   }
-    //},
     "titulo_vitrina_2": {
-  "type": "section-title",
-  "settings": {
-    "title": "COMBOS TIENDA",
-    "color": "#a8825a",
-    "uppercase": true,
-    "align": "center"
-  }
-},
+      "type": "section-title",
+      "settings": {
+        "title": "COMBOS TIENDA",
+        "align": "center",
+        "color": "#a8825a",
+        "uppercase": true
+      }
+    },
     "16303012351fd53818": {
       "type": "product-list",
       "settings": {
@@ -474,7 +433,6 @@
         "collection_handle": "los-mas-vendidos",
         "limit": 12,
         "product_style": "grid",
-        "button_text": "Ver más",
         "slide_enable": true,
         "navigation": true,
         "infinite": true,
@@ -486,109 +444,6 @@
         "column4": 2
       }
     },
-    // "1638200046fbf44825": {
-    //   "type": "image-list",
-    //   "blocks": {
-    //     "1638200046956339fd-0": {
-    //       "type": "image",
-    //       "settings": {
-    //         "width": "col-12",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-15_00dda57d-a63e-475f-9928-ba008fc0239e.jpg",
-    //         "image_mobile": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-17.jpg",
-    //         "link": "shopify://collections/all"
-    //       }
-    //     }
-    //   },
-    //   "block_order": [
-    //     "1638200046956339fd-0"
-    //   ],
-    //   "settings": {
-    //     "full_with": false,
-    //     "color_bg": "rgba(0,0,0,0)",
-    //     "padding_block": "30px 0",
-    //     "margin_block": "0 0 60px",
-    //     "image_ratio": "adapt",
-    //     "crop": false,
-    //     "effect": "effectNone",
-    //     "space_between": "4",
-    //     "custom_css": ""
-    //   }
-    // },
-    // "16303012351fd53819": {
-    //   "type": "product-list",
-    //   "settings": {
-    //     "full_with": false,
-    //     "color_bg": "rgba(0,0,0,0)",
-    //     "padding_block": "30px 0",
-    //     "margin_block": "0 0 60px",
-    //     "heading": "Seleccionados para vos",
-    //     "sub_heading": "",
-    //     "collection_handle": "carrusel-home-seleccionados-para-vos",
-    //     "limit": 10,
-    //     "product_style": "grid",
-    //     "button_text": "Ver todos",
-    //     "slide_enable": true,
-    //     "navigation": true,
-    //     "infinite": true,
-    //     "autoplay": true,
-    //     "autoplay_speed": "5000",
-    //     "column1": 5,
-    //     "column2": 4,
-    //     "column3": 3,
-    //     "column4": 2
-    //   }
-    // },
-    // "gallery_image_7A7eR8": {
-    //   "type": "gallery-image",
-    //   "blocks": {
-    //     "item_gz6KFr": {
-    //       "type": "item",
-    //       "settings": {
-    //         "image": "shopify://shop_images/Must_-Banner-_Envios.jpg",
-    //         "link": "shopify://pages/contact"
-    //       }
-    //     },
-    //     "item_6LLyk6": {
-    //       "type": "item",
-    //       "settings": {
-    //         "image": "shopify://shop_images/Must_-_Banner_-_Promociones_2.jpg",
-    //         "link": ""
-    //       }
-    //     },
-    //     "item_DW7XcW": {
-    //       "type": "item",
-    //       "settings": {
-    //         "image": "shopify://shop_images/Must_-_Banner_-_Medios_de_pago.jpg",
-    //         "link": ""
-    //       }
-    //     }
-    //   },
-    //   "block_order": [
-    //     "item_gz6KFr",
-    //     "item_6LLyk6",
-    //     "item_DW7XcW"
-    //   ],
-    //   "settings": {
-    //     "full_with": false,
-    //     "color_bg": "rgba(0,0,0,0)",
-    //     "padding_block": "",
-    //     "margin_block": "",
-    //     "heading": "",
-    //     "sub_heading": "",
-    //     "image_ratio": "adapt",
-    //     "crop": false,
-    //     "slide_enable": false,
-    //     "space_between": "4",
-    //     "navigation": true,
-    //     "infinite": true,
-    //     "autoplay": false,
-    //     "autoplay_speed": "10000",
-    //     "column1": 3,
-    //     "column2": 3,
-    //     "column3": 2,
-    //     "column4": 1
-    //   }
-    // },
     "1638203272229f5ce0": {
       "type": "blog-posts",
       "disabled": true,
@@ -624,87 +479,6 @@
         "column4": 1
       }
     },
-    // "1638203416ea4f5a6f": {
-    //   "type": "logo-list",
-    //   "blocks": {
-    //     "image_WTW8Yf": {
-    //       "type": "image",
-    //       "settings": {
-    //         "link": "shopify://collections/perfumes",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-38_42f44269-e5b3-4f9d-bce5-fe8eb4a05049.png",
-    //         "name": ""
-    //       }
-    //     },
-    //     "image_Th6Lhr": {
-    //       "type": "image",
-    //       "settings": {
-    //         "link": "shopify://collections/frontpage",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-35_8f100a76-51fe-4124-bd0f-45b25e7dbd27.png",
-    //         "name": ""
-    //       }
-    //     },
-    //     "163820341680956fea-1": {
-    //       "type": "image",
-    //       "settings": {
-    //         "link": "shopify://collections/featured-products",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-36_7154b18b-6552-4b32-80e5-d9864e700d50.png",
-    //         "name": ""
-    //       }
-    //     },
-    //     "163820341680956fea-2": {
-    //       "type": "image",
-    //       "settings": {
-    //         "link": "shopify://collections/furniture",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-34_673ec976-d594-49d3-815c-63ce8c8a58a8.png",
-    //         "name": ""
-    //       }
-    //     },
-    //     "163820341680956fea-3": {
-    //       "type": "image",
-    //       "settings": {
-    //         "link": "shopify://collections/lighting-lamp",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-33_65295fc0-5d27-4884-9788-884e02a23bbc.png",
-    //         "name": ""
-    //       }
-    //     },
-    //     "image_QefRMq": {
-    //       "type": "image",
-    //       "settings": {
-    //         "link": "",
-    //         "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-37_77da53b4-30e1-4599-b0bb-601ca93cd692.png",
-    //         "name": ""
-    //       }
-    //     }
-    //   },
-    //   "block_order": [
-    //     "image_WTW8Yf",
-    //     "image_Th6Lhr",
-    //     "163820341680956fea-1",
-    //     "163820341680956fea-2",
-    //     "163820341680956fea-3",
-    //     "image_QefRMq"
-    //   ],
-    //   "settings": {
-    //     "full_with": false,
-    //     "color_bg": "rgba(0,0,0,0)",
-    //     "padding_block": "",
-    //     "margin_block": "0 0 45px",
-    //     "heading": "",
-    //     "sub_heading": "",
-    //     "logo_size": "210x100",
-    //     "image_ratio": "adapt",
-    //     "crop": false,
-    //     "slide_enable": true,
-    //     "navigation": true,
-    //     "infinite": true,
-    //     "autoplay": true,
-    //     "autoplay_speed": "3000",
-    //     "column1": 6,
-    //     "column2": 4,
-    //     "column3": 3,
-    //     "column4": 2
-    //   }
-    // },
     "1638203345edf1554f": {
       "type": "border",
       "disabled": true,
@@ -742,7 +516,6 @@
         "collection_handle": "decor-art",
         "limit": 8,
         "product_style": "list",
-        "button_text": "",
         "slide_enable": false,
         "navigation": true,
         "infinite": true,
@@ -1077,44 +850,46 @@
       }
     },
     "titulo_vitrina_3": {
-  "type": "section-title",
-  "settings": {
-    "title": "Brindis de primavera",
-    "color": "#a8825a",
-    "uppercase": true,
-    "align": "center"
-  }
-},
+      "type": "section-title",
+      "settings": {
+        "title": "Brindis de primavera",
+        "align": "center",
+        "color": "#a8825a",
+        "uppercase": true
+      }
+    },
     "services_grid": {
-  "type": "services-grid",
-  "blocks": {
-    "service1": {
-      "type": "service",
-      "settings": {
-        "title": "Trumpeter Reserve Chardonnay",
-        "background_color": "#D2D2C7",
-        "link": "#"
-      }
-    },
-    "service2": {
-      "type": "service",
-      "settings": {
-        "title": "Pinot Noir",
-        "background_color": "#E6E6DD",
-        "link": "#"
-      }
-    },
-    "service3": {
-      "type": "service",
-      "settings": {
-        "title": "Trumpeter Rosé",
-        "background_color": "#F1F1EA",
-        "link": "#"
-      }
-    },
-  },
-  "block_order": ["service1", "service2", "service3"]
-}
+      "type": "services-grid",
+      "blocks": {
+        "service1": {
+          "type": "service",
+          "settings": {
+            "title": "Trumpeter Reserve Chardonnay",
+            "link": "#"
+          }
+        },
+        "service2": {
+          "type": "service",
+          "settings": {
+            "title": "Pinot Noir",
+            "link": "#"
+          }
+        },
+        "service3": {
+          "type": "service",
+          "settings": {
+            "title": "Trumpeter Rosé",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "settings": {}
+    }
   },
   "order": [
     "163948024846cb1ead",
@@ -1122,14 +897,9 @@
     "titulo_vitrina_1",
     "1639385876881b85aa",
     "home_image_with_text",
-    // "1638200046fbf44826",
     "titulo_vitrina_2",
     "16303012351fd53818",
-    // "1638200046fbf44825",
-    // "16303012351fd53819",
-    // "gallery_image_7A7eR8",
     "1638203272229f5ce0",
-    // "1638203416ea4f5a6f",
     "1638203345edf1554f",
     "1639452815e98a453e",
     "16304318673182aaa7",
@@ -1142,7 +912,7 @@
     "1630517878dbf2fdb0",
     "16393667012ecfc31c",
     "16394740977988931e",
-     "titulo_vitrina_3",
+    "titulo_vitrina_3",
     "services_grid"
   ]
 }
