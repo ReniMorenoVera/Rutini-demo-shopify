@@ -6,25 +6,38 @@
   <div>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
         <div style="display: flex; flex-direction: column; gap: 24px;">
-
             <div>
                 <img src="/cdn/shop/t/19/assets/logo.svg?v=173018033744185636721756954952" alt="">
             </div>
-
-            <div>
-                <div style="margin-bottom: 10px;">
-                    <p style="margin: 0;">Mesa de Ayuda:</p>
-                    <p style="margin: 0;">info@mail.com</p>
-                </div>
-
-                <div style="display: flex; gap : 10px">
-                    <img style="width:20px; height: 20px;"
-                        src="https://dinagenboxtech.vtexassets.com/assets/vtex.file-manager-graphql/images/c2057ca0-eabd-4e33-a80f-eb5a8446acdf___6d7388822d544a76ce46a66d3fb5747f.png"
-                        alt="">
-                    <p>11 1111 1111</p>
-                </div>
-            </div>
         </div>
+
+        {%- comment -%} Columns of footer links (driven by Navigation menus) {%- endcomment -%}
+<div class="footer-links" style="display:flex; gap:40px; flex-wrap:wrap;">
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'links_column' -%}
+      <div class="footer-col" {{ block.shopify_attributes }} style="min-width:180px">
+        {%- if block.settings.heading != blank -%}
+          <h4 style="margin:0 0 12px; font-weight:600; font-size:16px; color:#fff;">
+            {{ block.settings.heading }}
+          </h4>
+        {%- endif -%}
+
+        {%- if block.settings.menu != blank -%}
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;">
+            {%- for link in block.settings.menu.links -%}
+              <li>
+                <a href="{{ link.url }}" style="color:#fff; text-decoration:none; opacity:.9;">
+                  {{ link.title }}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
 
 
         <div style="display: flex; gap : 20px; align-items: flex-end;">
@@ -46,23 +59,27 @@
                 de compra</button>
         </div>
     </div>
+
     <div style="display: flex; justify-content: space-around; border-top: 1px solid white; padding-top: 20px; margin-top: 20px; flex-wrap: wrap;">
         <div style="display: flex; gap : 10px">
             <p>Powered by Pierce commerce</p>
             <img style="width:76px; height: 17px;"
                 src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/pierce-logo___216532d0ea67b678bb537aada0dc23e0.png"
                 alt="">
+                 <img style="width:76px; height: 17px;"
+                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/pierce-logo___216532d0ea67b678bb537aada0dc23e0.png"
+                alt="">
         </div>
+
+        <div style="margin-bottom: 10px;">
+                    <p style="margin: 0;">BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.
+Av. Rivadavia 413 piso 8º Buenos Aires, Argentina. | ® Rutini Wines 2023, todos los derechos reservados.</p>
+                </div>
+        
 
         <div style="display: flex;">
             <img style="width:36px; height: 50px;"
                 src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/fiscal___ca4f367f83d5a92fe6b7564b2b4bf92b.png"
-                alt="">
-            <img style="width:117px; height: 50px;"
-                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/datos-personales___b2c50da9dc93c212c859de0f431d6f6c.png"
-                alt="">
-            <img style="width:150px; height: 50px;"
-                src="https://dinagenboxtech.vtexassets.com/assets/vtex/assets-builder/dinagenboxtech.dinagenboxtech-store-theme/3.0.7/footer/cace___acd9b4fd34f8d2ec36c352b2fed6adb5.png"
                 alt="">
         </div>
     </div>
@@ -81,6 +98,25 @@
     }
   ],
   "blocks": [
+    {
+  "type": "links_column",
+  "name": "Links column",
+  "limit": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Enlaces"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu (Navigation)"
+    }
+  ]
+}
+    ,
     {
       "type": "newsletter",
       "name": "Newsletter",
