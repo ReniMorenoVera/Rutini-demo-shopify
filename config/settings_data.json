@@ -123,17 +123,7 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "settings": {
-          "enable": true,
-          "full_with": false,
-          "padding_block": "",
-          "color_bg": "rgba(0,0,0,0)",
-          "color_top_text": "#1f2021",
-          "color_top_link": "#1f2021",
-          "font-size": 14,
-          "enable_country_selector": false,
-          "text": ""
-        }
+        "settings": {}
       },
       "header": {
         "type": "header",
@@ -143,7 +133,7 @@
           "padding_block": "",
           "logo_width": 100,
           "logo_position": "left",
-          "menu": "main-menu",
+          "menu": "menu-rutini",
           "enable_sticky_header": true
         }
       },
@@ -177,7 +167,9 @@
           "links_column_wpV6f7",
           "links_column_e7j9Qi"
         ],
-        "settings": {}
+        "settings": {
+          "legal_notice": "<p>BEBER CON MODERACIÓN. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS. Av. Rivadavia 413 piso 8º Buenos Aires, Argentina. | © Rutini Wines 2023, todos los derechos reservados.</p>"
+        }
       }
     },
     "content_for_index": [],
