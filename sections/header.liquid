@@ -42,6 +42,15 @@
               </h1>
             {%- endif -%}
           </div>
+          
+
+
+          <div class="header-center d-none d-lg-block col text-center">
+            {%- render 'header-menu', section: section -%}
+          </div>
+
+
+
           <div class="header-right d-flex align-items-center {% if section.settings.logo_position == 'left' %}col-auto{% else %}col{% endif %}">
             <div class="header__search">
               <a
@@ -59,14 +68,14 @@
                     attr: 'width="18px" height="24px"'
                   %}
                 </span>
-              </a>
+              </a>a
             </div>
             <a href="/account/login" class="header__icon header__icon--account" aria-label="Iniciar sesión">
               <img
                 src="{{ 'account-login.png' | asset_url }}"
                 alt="Iniciar sesión"
                 width="24" height="24"
-                style="display:flex"
+                style="display:flex align-items:center;s"
               >
               </a>
             {%- include 'header-cart' -%}
@@ -202,36 +211,7 @@
 
 
 
-            <div class="solo-desktop" style="color: white;">
-
-                <div class="categoria-container">
-                  <div style="margin: 0 auto; width: fit-content;">
-                    <div class="categoria" data-categoria="modal">Moda</div>
-                    <div class="categoria" data-categoria="maquillaje">Maquillaje</div>
-                  </div>
-
-                    <div class="subcategorias-modal subcategorias">
-                      <div style="max-width: 1024px; margin: 0 auto;">
-                        <ul>
-                          <li>Vestidos</li>
-                          <li>Faldas</li>
-                          <li>Accesorios</li>
-                        </ul>
-                      </div>
-
-                    </div>
-
-                    <div class="subcategorias-maquillaje subcategorias">
-                        <div style="max-width: 1024px; margin: 0 auto;">
-                          <ul>
-                            <li>Labiales</li>
-                            <li>Sombras</li>
-                            <li>Brochas</li>
-                          </ul>
-                      </div>
-                    </div>
-                </div>
-            </div>
+            
           </div>
         </div>
       </div>
