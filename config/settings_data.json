@@ -221,7 +221,7 @@
         ],
         "settings": {
           "header_button": "Menú",
-          "fullwidth": true,
+          "fullwidth": false,
           "padding_block": "",
           "logo_width": 100,
           "logo_position": "left",

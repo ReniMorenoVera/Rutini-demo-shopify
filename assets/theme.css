@@ -2823,9 +2823,9 @@ body:not(.template-index) .main-content__inner {
 /* endslick */
 /* __ velaSlideshow ___ */
 
-/* .vela-slideshow__inner{
+ .vela-slideshow__inner{
   height: 423px;
-} */
+} 
 
 .banner__image .card_wrap .card__image {
   padding-top: 0 !important;
@@ -2894,16 +2894,18 @@ body:not(.template-index) .main-content__inner {
 }
 
 .vela-slideshow .slick-dots li button {
-  background: transparent;
+  background: #cacbcc;
   width: 14px;
   height: 14px;
-  border: 1px solid #51C5AE;
+  border: 1px solid #cacbcc;
   border-radius: 50%;
 }
 
-.vela-slideshow .slick-dots li:hover button,
+.vela-slideshow .slick-dots li:hover button{
+  background: #cacbcc;
+}
 .vela-slideshow .slick-dots li.slick-active button {
-  background: #51C5AE;
+  background: #b19371;
 }
 
 .vela-slideshow:hover .slick-arrow {
