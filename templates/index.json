@@ -873,7 +873,8 @@
           "type": "service",
           "settings": {
             "title": "Trumpeter Reserve Chardonnay",
-            "link": "#",
+            "image": "shopify://shop_images/COLECCION_ESPUMOSO_OP_3.webp",
+            "link": "https://www.tienda.rutiniwines.com/trumpeter-reserve-chardonnay/p",
             "button_label": "Ver más"
           }
         },
@@ -881,7 +882,8 @@
           "type": "service",
           "settings": {
             "title": "Pinot Noir",
-            "link": "#",
+            "image": "shopify://shop_images/PINOT_NOIR.webp",
+            "link": "https://www.tienda.rutiniwines.com/coleccion-rutini-pinot-noir/p",
             "button_label": "Ver más"
           }
         },
@@ -889,7 +891,8 @@
           "type": "service",
           "settings": {
             "title": "Trumpeter Rosé",
-            "link": "#",
+            "image": "shopify://shop_images/TRUMPETER_ROSE_OP_2.webp",
+            "link": "https://www.tienda.rutiniwines.com/trumpeter-reserve-rose-de-malbec/p",
             "button_label": "Ver más"
           }
         }
