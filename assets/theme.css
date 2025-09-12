@@ -4130,7 +4130,7 @@ body:not(.template-index) .main-content__inner {
   position: relative;
   display: block;
   padding: 25px 18px;
-  color: #FFF;
+  color: #797b7e;
   font-size: var(--menu-font-size);
   text-decoration: none;
   font-weight: 500;
@@ -4146,12 +4146,12 @@ body:not(.template-index) .main-content__inner {
 
 .main-menu__nav-item>a:hover, .menu-button:hover,
 .main-menu__nav-item>a:focus, .menu-button:focus {
-  color: #DC888E;
+  color: #b19371;
 }
 
 .main-menu__nav-item:hover>a,
 .main-menu__nav-item:focus>a {
-  color: #51C5AE;
+  color: #b19371;
 }
 
 .menu-dropdown:hover>.menu-dropdown__content,

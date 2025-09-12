@@ -1,51 +1,194 @@
-
 <div id="searchTop" class="search-modal collapse">
-	<div class="search-modal__content" tabindex="-1">
-		{%- if settings.predictive_search_enabled -%}
-			<predictive-search class="search-modal__form w-100" data-loading-text="{{ 'accessibility.loading' | t }}">
-		{%- endif -%}
-			<form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form search search-modal__form position-relative pe-5">
-			
-			<input class="search__input form-control search-input border-0 fst-italic"
-			id="Search-In-Modal-1"
-			type="search"
-			name="q"
-			value=""
-			placeholder="{{ 'general.search.search_placeholder' | t }}"
-			{%- if settings.predictive_search_enabled -%}
-				role="combobox"
-				aria-expanded="false"
-				aria-owns="predictive-search-results-list"
-				aria-controls="predictive-search-results-list"
-				aria-haspopup="listbox"
-				aria-autocomplete="list"
-				autocorrect="off"
-				autocomplete="off"
-				autocapitalize="off"
-				spellcheck="false"
-			{%- endif -%}
-			>
-			<label class="d-none" for="Search-In-Modal">{{ 'general.search.search_placeholder' | t }}</label>
-			<input type="hidden" name="options[prefix]" value="last">
-			<input type="hidden" name="options[sort_by]" value="price-descending" />
-			<button class="search__button btn btn-link p-2" aria-label="{{ 'general.search.search_placeholder' | t }}">
-				{% render 'icons', icon: 'search', class: 'icon icon-search' %}
-			</button>
+  <div class="search-modal__content" tabindex="-1">
+    <button type="button" class="search-close" aria-label="Cerrar">×</button>
 
-			{%- if settings.predictive_search_enabled -%}
-				<div class="predictive-search predictive-search--header position-absolute bg-white overflow-auto" tabindex="-1" data-predictive-search>
-					<div class="predictive-search__loading-state d-none">
-						<svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-						<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-						</svg>
-					</div>
-				</div>
+    {% if settings.predictive_search_enabled %}
+    <predictive-search class="search-modal__form w-100" data-loading-text="{{ 'accessibility.loading' | t }}">
+    {% endif %}
 
-				<span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
-			{%- endif -%}
-			</form>
-		{%- if settings.predictive_search_enabled -%}
-			</predictive-search>
-		{%- endif -%}
-	</div>
+      <form action="{{ routes.search_url }}" method="get" role="search"
+            class="search search-modal__form position-relative">
+        <input
+          class="search__input form-control search-input border-0 fst-italic"
+          id="Search-In-Modal-1"
+          type="search"
+          name="q"
+          value=""
+          placeholder="Buscar..."
+          aria-label="Buscar"
+          {% if settings.predictive_search_enabled %}
+            role="combobox"
+            aria-expanded="false"
+            aria-owns="predictive-search-results-list"
+            aria-controls="predictive-search-results-list"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            autocorrect="off"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          {% endif %}
+        />
+
+        <!-- Lupa dentro del input -->
+        <button class="search__button btn p-0" type="submit" aria-label="Buscar">
+          {% render 'icons', icon: 'search', class: 'icon' %}
+        </button>
+
+        {% if settings.predictive_search_enabled %}
+          <div class="predictive-search predictive-search--header bg-white overflow-auto"
+               tabindex="-1" data-predictive-search>
+            <div class="predictive-search__loading-state d-none">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </div>
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        {% endif %}
+      </form>
+
+    {% if settings.predictive_search_enabled %}
+    </predictive-search>
+    {% endif %}
+  </div>
 </div>
+
+<style>
+#searchTop .search-modal__form {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+#searchTop .search__input.search-input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 10px;
+  padding: 0 56px 0 16px; 
+  font-size: 16px;
+  box-shadow: none !important;
+  background: #fff;
+}
+
+#searchTop .search__button {
+  position: absolute;
+  right: 16px;              
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #9b9b9b;
+  z-index: 2;               
+  padding: 0;               
+  background: transparent;  
+}
+
+#searchTop .search__button .icon {
+  width: 18px;
+  height: 18px;
+}
+
+#searchTop.search-modal{
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 10000 !important;
+  display: none;               
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;       
+  visibility: visible !important;
+}
+#searchTop.search-modal.show{ display:block; }
+
+#searchTop.search-modal.show::before{
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.45);
+}
+
+#searchTop .search-modal__content{
+  position:absolute; right:0; top:0;
+  height:100%;
+  width: clamp(360px, 42vw, 560px);
+  background:#fff;
+  box-shadow:-8px 0 24px rgba(0,0,0,.18);
+  padding:28px 20px;
+  overflow:auto;
+  transform: translateX(100%);
+  transition: transform .28s ease;
+}
+#searchTop.show .search-modal__content{ transform: translateX(0); }
+
+#searchTop .search__input.search-input{
+  width:100%;
+  height:48px;
+  border:1px solid #d9d9d9 !important;
+  border-radius:10px;
+  padding:0 52px 0 14px;
+  font-size:16px;
+  box-shadow:none !important;
+  background:#fff;
+}
+
+#searchTop .search__button{
+  position:absolute;
+  right:10px; top:50%;
+  transform:translateY(-50%);
+  width:42px; height:42px;
+  display:inline-flex;
+  align-items:center; 
+  justify-content:center;
+  color:#9b9b9b;
+}
+#searchTop .search__button .icon{ height:18px; }
+
+#searchTop .predictive-search--header{
+  position: static !important;
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  max-height: calc(100vh - 200px);
+  box-shadow: none;
+}
+
+#searchTop .search-close{
+  position:absolute; 
+  top:10px; 
+  right:12px;
+  width:40px; 
+  height:40px;
+  border:0; 
+  background:transparent;
+  color:#777; 
+  font-size:28px; 
+  line-height:40px;
+  cursor:pointer;
+}
+#searchTop .search-close:hover{ color:#444; }
+
+	</style>
+
+
+	<script>
+(function(){
+  var modal = document.getElementById('searchTop');
+  if(!modal) return;
+  var panel = modal.querySelector('.search-modal__content');
+  var closeBtn = modal.querySelector('.search-close');
+
+  function close(){ modal.classList.remove('show'); }
+
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if(!panel.contains(e.target)) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+</script>

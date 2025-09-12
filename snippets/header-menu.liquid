@@ -7,14 +7,17 @@
   <ul class="main-menu__nav list-unstyled d-flex m-0 justify-content-center">
     {%- for menu_link in main_links -%}
       {%- assign is_mega = false -%}
-      {%- for block in section.blocks -%}
-        {%- assign menu_item = block.settings.title | strip -%}
-        {%- if menu_item != blank and menu_link.title contains menu_item -%}
-          {%- assign is_mega = true -%}
-          {%- include 'header-megamenu' -%}
-          {%- break -%}
-        {%- endif -%}
-      {%- endfor -%}
+      {%- assign link_title_norm = menu_link.title | strip | downcase -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'menu' -%} 
+    {%- assign block_title_norm = block.settings.title | strip | downcase -%}
+    {%- if block_title_norm != blank and block_title_norm == link_title_norm -%}
+      {%- assign is_mega = true -%}
+      {%- render 'header-megamenu', block: block, menu_link: menu_link -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
 
       {%- if is_mega == false -%}
         {%- if menu_link.links != blank -%}
@@ -43,15 +46,13 @@
 {%- endif -%}
 
 <style>
-  .main-menu__nav > li { 
+  {% comment %} .main-menu__nav > li { 
     position: relative; 
     margin: 0 22px; 
-  }
+  } {% endcomment %}
 
-  .main-menu__link { 
-    color:#fff; 
-    text-decoration:none; 
-    letter-spacing:.06em; 
+ .main-menu .main-menu__nav .main-menu__nav-item > a > svg { 
+    display: none !important; 
   }
 
   .menu-dropdown__content{
@@ -80,5 +81,237 @@
   .main-menu__nav > li:hover > .menu-dropdown__content--megamenu{ 
     display:block; 
   }
+
+.main-menu__nav > li > a.main-menu__link {
+  color:#797b7e;
+}
+
+.menu-dropdown__content,
+.menu-dropdown__content .main-menu__link {
+  color:#222;
+}
+
+.megamenu-heading span {
+  color:#222;
+  font-weight:600;
+  font-size:18px;
+  display:block;
+  margin-bottom:8px;
+}
+
+.megamenu-links__link.main-menu__link {
+  color:#444;
+  display:block;
+  padding:4px 0;
+  font-weight:400;
+  text-decoration:none;
+}
+.megamenu-links__link.main-menu__link:hover {
+  color:#a07a4f; 
+}
+
+.menu-row { 
+  display:flex; 
+  gap:48px; 
+  align-items:flex-start; 
+  flex-wrap:nowrap;
+}
+.menu-dropdown__content--megamenu{
+  display:none;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top: calc(100% + 18px);
+  width:100%;
+  max-width:1200px;
+  background:#fff;
+  padding:32px 48px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  z-index:999;
+}
+.main-menu__nav > li:hover > .menu-dropdown__content--megamenu{ 
+  display:block; 
+}
+
+.menu-dropdown__content{
+  display:none;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top: calc(100% + 18px);
+  background:#fff;
+  padding:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  z-index:999;
+}
+.main-menu__nav > li:hover > .menu-dropdown__content{ 
+  display:block; 
+}
+
+.main-menu__nav { gap: 44px; }
+.main-menu__nav > li { 
+  position: static;          
+  margin: 0; 
+}
+.main-menu__link { 
+  color:#fff; text-decoration:none; letter-spacing:.06em;
+}
+
+.menu-dropdown__content{
+  display:none;
+  position:absolute;
+  left:50%; transform:translateX(-50%);
+  top:100%;                   
+  background:#fff; color:#222;
+  padding:18px 22px;
+  border:1px solid rgba(0,0,0,.06);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  z-index:999;
+}
+.main-menu__nav > li:hover > .menu-dropdown__content{ display:block; }
+
+.menu-dropdown__content--megamenu{
+  display:none;
+  position:absolute;
+  left:50%; transform:translateX(-50%);
+  top:100%;
+  width:100vw;                 
+  background:#fff;
+  padding:40px 0;              
+  border-top:1px solid rgba(0,0,0,.06);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  z-index:999;
+}
+.main-menu__nav > li:hover > .menu-dropdown__content--megamenu{ display:block; }
+
+.menu-row{ 
+  display:flex; flex-wrap:wrap; gap:32px;
+  max-width:1180px; margin:0 auto;   
+}
+.menu-row__col{ min-width:200px; }
+
+.megamenu-heading{ 
+  font-weight:600; margin-bottom:12px; 
+}
+
+.megamenu-banner img{ 
+  display:block; max-width:520px; height:auto; margin-left:auto; 
+}
+
+.header-wrap{ position:relative; z-index:1000; }
+
+.main-menu__nav > li > .main-menu__link > svg{
+  display: none !important;
+}
+
+.main-menu__nav > li { 
+  position: static; 
+}
+
+.menu-dropdown__content{
+  position: absolute;
+  top: 100%;                     
+  left: 50%;
+  transform: translateX(-50%);  
+  width: 100vw;                  
+  background: #fff;
+  padding: 24px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border-top: 1px solid rgba(0,0,0,.06);
+  z-index: 999;
+}
+
+.menu-dropdown__content--megamenu{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  background: #fff;
+  padding: 40px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  border-top: 1px solid rgba(0,0,0,.06);
+  z-index: 999;
+}
+
+.menu-dropdown__content--megamenu{
+  display:none;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:100%;                
+  width:100vw;             
+  background:#fff;
+  padding:0;               
+  border-top:1px solid #c7a77a; 
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  z-index:1000;
+}
+
+.menu-dropdown__content--megamenu .menu-row{
+  max-width:1200px;
+  margin:0 auto;
+  padding:32px 20px;
+  display:flex;
+  gap:32px;
+  align-items:flex-start;
+  flex-wrap:nowrap;         
+  justify-content:space-between;
+}
+
+.menu-row__col{ flex:0 0 auto; }
+.menu-row__col--20{ width:20%; }
+.menu-row__col--25{ width:25%; }
+.menu-row__col--33{ width:33%; }
+.menu-row__col--50{ width:50%; }
+.menu-row__col--66{ width:66%; }
+.menu-row__col--75{ width:75%; }
+.menu-row__col--80{ width:80%; }
+.menu-row__col--100{ width:100%; }
+
+/* Links del menú */
+.megamenu-links .megamenu-heading span{ font-weight:600; }
+.megamenu-links__item a{
+  color:#222; text-decoration:none;
+}
+.megamenu-links__item a:hover{ text-decoration:underline; }
+
+/* Banner a la derecha */
+.megamenu-banner{ margin-left:auto; text-align:right; }
+.megamenu-banner img{ display:block; max-width:100%; height:auto; }
+
+/* Menú centrado y sin wrap (override a utilidades de Bootstrap si las hubiese) */
+.main-menu {
+  width: 100%;
+}
+
+.main-menu__nav{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  flex-wrap: nowrap !important;             /* <— sin wraps */
+  gap: clamp(20px, 3vw, 64px);              /* espacio responsivo entre items */
+}
+
+.main-menu__nav > li{
+  flex: 0 0 auto;                           /* cada item con ancho natural */
+  margin: 0;                                /* evitamos empujes laterales */
+}
+
+.main-menu__link{
+  white-space: nowrap;                      /* no cortar “EXCLUSIVO ONLINE” */
+  line-height: 1;
+  padding: 18px 0;                          /* alto clicable */
+}
+
+/* Si en anchos medios queda justo, reducimos gap/tamaño */
+@media (max-width: 1400px){
+  .main-menu__nav{ gap: clamp(12px, 2.4vw, 40px); }
+}
+@media (max-width: 1280px){
+  .main-menu__link{ font-size: .95rem; }
+}
+
+
 
 </style>
