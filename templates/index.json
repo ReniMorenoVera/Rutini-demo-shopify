@@ -274,7 +274,7 @@
         "color_bg": "rgba(0,0,0,0)",
         "padding_block": "",
         "margin_block": "0 0 14px",
-        "navigation": true,
+        "navigation": false,
         "pagination": true,
         "fade": false,
         "autoplay": true,
