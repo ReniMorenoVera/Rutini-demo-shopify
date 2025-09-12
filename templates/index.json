@@ -17,10 +17,10 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Web_-_Noviembre-01.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-04.jpg",
-            "link": "",
-            "alignment": "text-left align-top",
+            "image": "shopify://shop_images/226c78c4-e232-4fc2-9b72-14234c20866d___328c13b763dd86d8db06a3dbcb904890.webp",
+            "image_mobile": "shopify://shop_images/226c78c4-e232-4fc2-9b72-14234c20866d___328c13b763dd86d8db06a3dbcb904890.webp",
+            "link": "https://www.tienda.rutiniwines.com/rutini-coleccion?map=productClusternames",
+            "alignment": "text-center align-middle",
             "text-alignment": "center",
             "slides_effect": "leftright",
             "subheading": "",
@@ -53,9 +53,9 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Web_-_Noviembre-02_49a921c3-676c-4505-88fa-7f7a1fb92cf9.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Web_-_Noviembre-03.jpg",
-            "link": "",
+            "image": "shopify://shop_images/Banner_SEP_SV_2.webp",
+            "image_mobile": "shopify://shop_images/Banner_SEP_SV_2.webp",
+            "link": "https://www.tienda.rutiniwines.com/single-vineyard-gualtallary-malbec/p",
             "alignment": "text-left align-top",
             "text-alignment": "center",
             "slides_effect": "leftright",
@@ -89,13 +89,13 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-02.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Banner_-_Idraet.jpg",
-            "link": "",
+            "image": "shopify://shop_images/Banner_SEP_Enologos_5.webp",
+            "image_mobile": "shopify://shop_images/Banner_SEP_Enologos_5.webp",
+            "link": "https://www.tienda.rutiniwines.com/208?map=productClusterIds",
             "alignment": "text-left align-middle",
             "text-alignment": "left",
             "slides_effect": "default",
-            "subheading": "<span class=\"fw-bold\"></span>",
+            "subheading": "",
             "subheading_color": "#1f1f1f",
             "subheading_font_family": "ff-special",
             "subheading_font_size": 18,
@@ -125,8 +125,6 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-04.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Destacados_92065c98-b8fe-40d3-a988-879d2045e3fb.jpg",
             "link": "",
             "alignment": "text-left align-top",
             "text-alignment": "center",
@@ -162,8 +160,6 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-01.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Perfumes_52666ab7-b12f-4354-9c40-d31d20da7a26.jpg",
             "link": "",
             "alignment": "text-left align-top",
             "text-alignment": "center",
@@ -198,8 +194,6 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-05.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Expertas_3375cea8-e2a0-4a8d-bff9-97addfa6e547.jpg",
             "link": "",
             "alignment": "text-left align-middle",
             "text-alignment": "left",
@@ -235,8 +229,6 @@
           "settings": {
             "content_color": "rgba(0,0,0,0)",
             "position_content": true,
-            "image": "shopify://shop_images/Must_-_Nueva_Web_-_Banners-03.jpg",
-            "image_mobile": "shopify://shop_images/Must_-_Banner_Principal_-_Benetton_3d6d021f-c4af-48ab-b851-d9b3772677d1.jpg",
             "link": "",
             "alignment": "text-left align-top",
             "text-alignment": "center",
@@ -285,16 +277,10 @@
         "fade": false,
         "autoplay": true,
         "autoplay_speed": "8000",
-        "image1": "shopify://shop_images/Must_-_Banner_-_Perfumeria.jpg",
         "url1": "shopify://collections/decor-art",
-        "image2": "shopify://shop_images/Must_-_Banners_-_Love_yourself.jpg",
         "url2": "shopify://collections/furniture",
         "banner_mobile": "always"
       }
-    },
-    "home_image_with_text": {
-      "type": "image-text-rutini",
-      "settings": {}
     },
     "1630410045bedb52b5": {
       "type": "services",
@@ -302,7 +288,6 @@
         "a3cc3efd-9e0c-4dd6-8127-bece5c56a534": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/370x228.png",
             "box_title": "Envío gratis",
             "color_title": "#5b5b5b",
             "title_font_size": 14,
@@ -314,7 +299,6 @@
         "23c6cd9f-3a7f-4c3c-923b-40f0a80ed7fd": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/370x228.png",
             "box_title": "Atención telefónica",
             "color_title": "#5b5b5b",
             "title_font_size": 14,
@@ -326,7 +310,6 @@
         "a9c66a77-11e9-4fea-8d38-3b9af03999f9": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/370x228.png",
             "box_title": "Pagá con tarjeta",
             "color_title": "#5b5b5b",
             "title_font_size": 14,
@@ -369,7 +352,9 @@
         "title": "Selección del Enólogo",
         "align": "center",
         "color": "#a8825a",
-        "uppercase": true
+        "uppercase": true,
+        "font_size_mobile": "22px",
+        "font_size_desktop": "34px"
       }
     },
     "1639385876881b85aa": {
@@ -412,13 +397,31 @@
         "column4": 2
       }
     },
+    "home_image_with_text": {
+      "type": "image-text-rutini",
+      "settings": {
+        "full_width": true,
+        "max_width": "1200px",
+        "section_bg": "rgba(0,0,0,0)",
+        "section_padding": "60px 80px",
+        "section_margin": "0",
+        "reverse": false,
+        "panel_bg": "#f6f6f6",
+        "panel_padding": "24px",
+        "panel_padding_desktop": "48px",
+        "title": "GUÍA PARA DISFRUTAR CADA COPA",
+        "text": "<p>El equipo enológico de Rutini Wines comparte sus recomendaciones. Vinos elegidos con pasión y maridajes que te darán una guía simple, apasionada y confiable para acompañar cada copa.</p>"
+      }
+    },
     "titulo_vitrina_2": {
       "type": "section-title",
       "settings": {
         "title": "COMBOS TIENDA",
         "align": "center",
         "color": "#a8825a",
-        "uppercase": true
+        "uppercase": true,
+        "font_size_mobile": "22px",
+        "font_size_desktop": "34px"
       }
     },
     "16303012351fd53818": {
@@ -855,7 +858,9 @@
         "title": "Brindis de primavera",
         "align": "center",
         "color": "#a8825a",
-        "uppercase": true
+        "uppercase": true,
+        "font_size_mobile": "22px",
+        "font_size_desktop": "34px"
       }
     },
     "services_grid": {
@@ -865,21 +870,24 @@
           "type": "service",
           "settings": {
             "title": "Trumpeter Reserve Chardonnay",
-            "link": "#"
+            "link": "#",
+            "button_label": "Ver más"
           }
         },
         "service2": {
           "type": "service",
           "settings": {
             "title": "Pinot Noir",
-            "link": "#"
+            "link": "#",
+            "button_label": "Ver más"
           }
         },
         "service3": {
           "type": "service",
           "settings": {
             "title": "Trumpeter Rosé",
-            "link": "#"
+            "link": "#",
+            "button_label": "Ver más"
           }
         }
       },
